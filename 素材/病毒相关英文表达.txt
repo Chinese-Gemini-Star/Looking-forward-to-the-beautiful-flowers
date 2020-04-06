@@ -1,0 +1,14 @@
+01病毒、疾病
+冠状病毒：coronavirus\r\n新型冠状病毒：novel coronavirus(2019-nCoV)\r\n传染病：epidemic/infectious disease\r\n流行病学家：epidemiologist\r\n爆发：outbreak\r\n乙类传染病：category-B infectious diseases\r\n病毒的动物宿主：animal hosts\r\n确诊病例：confirmed cases\r\n疑似病例：suspected cases\r\n人传人：person-to-person transmission\r\n超级传播者：super-spreader\r\n密切接触者：close contact\r\n临床症状：clinical signs and symptoms\r\n发热、咳嗽、呼吸困难：fever, cough and difficulty in breathing\r\n发病率：incidence rate\r\n致死率：fatality /mortality /death rate\r\n发热门诊：fever clinic\r\n发热病人：fever patient\r\n重症患者：patient in critical condition\r\n潜伏期：incubation period\r\n飞沫传播：droplet transmission
+
+02医疗
+各级医疗卫生机构：medical and health institutions at various levels\r\n一线医护人员：front-line medical workers\r\n口罩：(face) mask\r\n戴上、取下和处理口罩：put on, take off and dispose of a mask\r\n防护服：protective gowns /clothing /gear /suits\r\n护目镜：goggles\r\n一次性手套：disposable gloves\r\n医疗物资：medical supplies\r\n疫苗：vaccine\r\n自我隔离：quarantine oneself\r\n监测体温：monitor/check body temperature\r\n自觉接受医学观察：voluntarily put oneself under medical observation\r\n解除医学观察：be discharged from medical observation\r\n诊断、治疗、追踪和筛查：diagnosis, treatment, tracing and screening
+
+03防护
+早发现、早隔离：\r\nearly detection and early isolation\r\n\r\n公共场所消毒、通风以及体温检测：\r\ndisinfection, ventilation and body temperature monitoring in public areas.\r\n\r\n用肥皂和清水或含有酒精的洗手液勤洗手：\r\nFrequently clean hands by using alcohol-based hand rub or soap and water.\r\n\r\n咳嗽和打喷嚏时，屈肘或者用纸巾遮掩口鼻：\r\nWhen coughing and sneezing, cover mouth and nose with flexed elbow or tissue.
+
+04影响、对策
+国际关注的突发公共卫生事件：\r\nPublic Health Emergency of International Concern (PHEIC)\r\n启动重大突发公共卫生事件一级响应：\r\nactivate first-level public health emergency response (mechanism)\r\n开展流行病学调查：conduct epidemiological investigations\r\n遏制疫情蔓延：contain the epidemic\r\n封城：the lockdown of a city / a city is on lockdown\r\n瞒报：underreport\r\n延长春节假期：extend the Spring Festival holiday\r\n医疗物资紧缺：a dire shortage of medical supplies\r\n紧缺物资：scarce materials\r\n增加供给：boost supply\r\n打击捂货惜售：crack down on hoarding of\r\n发疫情财：make a fortune out of the epidemic\r\n顶格处罚：top-level/maximum penalty\r\n复产：resume production
+
+05相关组织、机构
+世界卫生组织：World Health Organization (WHO)\r\n世界卫生组织驻华代表处：WHO China Country Office\r\n湖北省卫生健康委员会：Health Commission of Hubei Province\r\n武汉市卫生健康委员会：Wuhan Municipal Health Commission\r\n中国红十字会：Red Cross Society of China\r\n中国红十字基金会：Chinese Red Cross Foundation (CRCF)\r\n湖北省红十字会：Red Cross Society of China Hubei Branch\r\n武汉市红十字会：Red Cross Society of China Wuhan Branch\r\n武汉华南海鲜批发市场：Wuhan Huanan Seafood Wholesale Market\r\n武汉市金银潭医院：Wuhan Jinyintan Hospital\r\n小汤山医院：Xiaotangshan Hospital\r\n火神山医院：Huoshenshan (Fire God Mountain) Hospital\r\n雷神山医院：Leishenshan (Thunder God Mountain) Hospital
