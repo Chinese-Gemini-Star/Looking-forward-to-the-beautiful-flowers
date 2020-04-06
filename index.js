@@ -8302,19 +8302,13 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.instance_28._off = true;
 	new cjs.ButtonHelper(this.instance_28, 0, 1, 2, false, new lib.返回按钮(), 3);
 
-	this.back2_1 = new lib.返回按钮();
-	this.back2_1.setTransform(861.05,21.6);
-	this.back2_1._off = true;
-	new cjs.ButtonHelper(this.back2_1, 0, 1, 2, false, new lib.返回按钮(), 3);
-
 	this.back4 = new lib.返回按钮();
 	this.back4.setTransform(861.05,21.6);
 	this.back4._off = true;
 	new cjs.ButtonHelper(this.back4, 0, 1, 2, false, new lib.返回按钮(), 3);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_28).wait(389).to({_off:false},0).to({_off:true,alpha:1},30).wait(31));
-	this.timeline.addTween(cjs.Tween.get(this.back2_1).wait(389).to({_off:false},30).to({_off:true},2).wait(29));
-	this.timeline.addTween(cjs.Tween.get(this.back4).wait(419).to({_off:false},2).to({alpha:0},28).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.back4).wait(389).to({_off:false},30).wait(2).to({alpha:0},28).wait(1));
 
 	// 外部框架
 	this.instance_29 = new lib.框架背景("synched",0);
@@ -8367,7 +8361,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_.png", id:"index_atlas_"}
+		{src:"images/index_atlas_.png?1586169745253", id:"index_atlas_"}
 	],
 	preloads: []
 };
