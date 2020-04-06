@@ -7857,14 +7857,14 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 		this.stop();
 		
 		// 添加按钮监听
-		this.back4.addEventListener("click", backHome2);
+		this.back4.addEventListener("click", backHome);
 		this.virusesAndDiseases.addEventListener("click", VirusesAndDiseases);
 		this.medicalCare.addEventListener("click", MedicalCare);
 		this.protect.addEventListener("click", Protect);
 		this.influenceAndCountermeasures.addEventListener("click", InfluenceAndCountermeasures);
 		this.relevantOrganizationsAndInstitutions.addEventListener("click", RelevantOrganizationsAndInstitutions);
 		
-		function backHome2() {
+		function backHome() {
 			// 返回
 			that.play();
 		}
@@ -8296,40 +8296,46 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.timeline.addTween(cjs.Tween.get(this.medicalCare).wait(389).to({_off:false},30).wait(2).to({y:180,alpha:0},28).wait(1));
 
 	// 返回按钮
+	this.instance_28 = new lib.返回按钮();
+	this.instance_28.setTransform(861.05,21.6);
+	this.instance_28.alpha = 0;
+	this.instance_28._off = true;
+	new cjs.ButtonHelper(this.instance_28, 0, 1, 2, false, new lib.返回按钮(), 3);
+
 	this.back4 = new lib.返回按钮();
-	this.back4.setTransform(861.05,21.6);
-	this.back4.alpha = 0;
+	this.back4.setTransform(862.05,27.6);
 	this.back4._off = true;
 	new cjs.ButtonHelper(this.back4, 0, 1, 2, false, new lib.返回按钮(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.back4).wait(389).to({_off:false},0).to({alpha:1},30).wait(2).to({alpha:0},28).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_28).wait(389).to({_off:false},0).to({_off:true,x:862.05,y:27.6,alpha:1},30).wait(31));
+	this.timeline.addTween(cjs.Tween.get(this.back4).wait(389).to({_off:false},30).to({x:861.05,y:21.6},2).to({alpha:0},28).wait(1));
 
 	// 外部框架
-	this.instance_28 = new lib.框架背景("synched",0);
-	this.instance_28.setTransform(481.05,322.6,1,1,0,0,0,463.6,301);
-	this.instance_28.alpha = 0;
-	this.instance_28._off = true;
+	this.instance_29 = new lib.框架背景("synched",0);
+	this.instance_29.setTransform(481.05,322.6,1,1,0,0,0,463.6,301);
+	this.instance_29.alpha = 0;
+	this.instance_29._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_28).wait(389).to({_off:false},0).to({alpha:1},30).to({startPosition:0},2).to({alpha:0},28).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_29).wait(389).to({_off:false},0).to({alpha:1},30).to({startPosition:0},2).to({alpha:0},28).wait(1));
 
 	// 背景
-	this.instance_29 = new lib.背景_改("synched",0);
-	this.instance_29.setTransform(665.5,320.8,1,1,0,0,0,590.5,318.8);
-	this.instance_29.alpha = 0;
-
-	this.instance_30 = new lib.背景2("synched",0);
-	this.instance_30.setTransform(72.8,325.4,1,1,0,0,0,886.8,325.4);
+	this.instance_30 = new lib.背景_改("synched",0);
+	this.instance_30.setTransform(665.5,320.8,1,1,0,0,0,590.5,318.8);
 	this.instance_30.alpha = 0;
-	this.instance_30._off = true;
 
-	this.instance_31 = new lib.背景3_1("synched",0);
-	this.instance_31.setTransform(600,393.5,1,1,0,0,0,600,393.5);
+	this.instance_31 = new lib.背景2("synched",0);
+	this.instance_31.setTransform(72.8,325.4,1,1,0,0,0,886.8,325.4);
 	this.instance_31.alpha = 0;
 	this.instance_31._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_29).to({alpha:0.9883},58,cjs.Ease.circOut).to({alpha:1},1).to({x:369.25,alpha:0.3086},60,cjs.Ease.quartIn).to({startPosition:0},30,cjs.Ease.quartInOut).to({x:665.5,alpha:0},30,cjs.Ease.cubicOut).to({x:369.25,alpha:0.3086},1,cjs.Ease.circOut).to({alpha:1},28,cjs.Ease.circIn).to({startPosition:0},1).to({x:665.5,alpha:0},30,cjs.Ease.quartOut).to({_off:true,regX:886.8,regY:325.4,x:72.8,y:325.4},1).wait(90).to({_off:false,regX:590.5,regY:318.8,x:665.5,y:320.8},29,cjs.Ease.circInOut).to({_off:true,regX:600,regY:393.5,x:600,y:393.5},1).wait(90));
-	this.timeline.addTween(cjs.Tween.get(this.instance_30).wait(239).to({_off:false},1).to({x:886.8,alpha:1},89,cjs.Ease.sineInOut).to({startPosition:0},1).to({_off:true,regX:590.5,regY:318.8,x:665.5,y:320.8,alpha:0},29,cjs.Ease.circInOut).wait(91));
-	this.timeline.addTween(cjs.Tween.get(this.instance_31).wait(359).to({_off:false},1).to({x:360,y:246.5,alpha:1},59,cjs.Ease.quadOut).to({startPosition:0},1).wait(1).to({x:368.35,y:251.6,alpha:0.9654},0).wait(1).to({x:376.65,y:256.7,alpha:0.9308},0).wait(1).to({x:384.9,y:261.8,alpha:0.8963},0).wait(1).to({x:393.2,y:266.85,alpha:0.8617},0).wait(1).to({x:401.5,y:271.95,alpha:0.8271},0).wait(1).to({x:409.8,y:277,alpha:0.7926},0).wait(1).to({x:418.1,y:282.1,alpha:0.758},0).wait(1).to({x:426.4,y:287.15,alpha:0.7235},0).wait(1).to({x:434.65,y:292.25,alpha:0.689},0).wait(1).to({x:442.95,y:297.3,alpha:0.6544},0).wait(1).to({x:451.25,y:302.4,alpha:0.6199},0).wait(1).to({x:459.5,y:307.45,alpha:0.5854},0).wait(1).to({x:467.8,y:312.55,alpha:0.5509},0).wait(1).to({x:476.1,y:317.6,alpha:0.5164},0).wait(1).to({x:484.35,y:322.7,alpha:0.482},0).wait(1).to({x:492.65,y:327.75,alpha:0.4475},0).wait(1).to({x:500.9,y:332.8,alpha:0.413},0).wait(1).to({x:509.15,y:337.9,alpha:0.3786},0).wait(1).to({x:517.45,y:342.95,alpha:0.3441},0).wait(1).to({x:525.7,y:348,alpha:0.3097},0).wait(1).to({x:533.95,y:353.05,alpha:0.2752},0).wait(1).to({x:542.25,y:358.15,alpha:0.2408},0).wait(1).to({x:550.5,y:363.2,alpha:0.2064},0).wait(1).to({x:558.75,y:368.25,alpha:0.172},0).wait(1).to({x:567,y:373.3,alpha:0.1376},0).wait(1).to({x:575.25,y:378.35,alpha:0.1032},0).wait(1).to({x:583.5,y:383.4,alpha:0.0688},0).wait(1).to({x:591.75,y:388.45,alpha:0.0344},0).wait(1).to({x:600,y:393.5,alpha:0},0).wait(1));
+	this.instance_32 = new lib.背景3_1("synched",0);
+	this.instance_32.setTransform(600,393.5,1,1,0,0,0,600,393.5);
+	this.instance_32.alpha = 0;
+	this.instance_32._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_30).to({alpha:0.9883},58,cjs.Ease.circOut).to({alpha:1},1).to({x:369.25,alpha:0.3086},60,cjs.Ease.quartIn).to({startPosition:0},30,cjs.Ease.quartInOut).to({x:665.5,alpha:0},30,cjs.Ease.cubicOut).to({x:369.25,alpha:0.3086},1,cjs.Ease.circOut).to({alpha:1},28,cjs.Ease.circIn).to({startPosition:0},1).to({x:665.5,alpha:0},30,cjs.Ease.quartOut).to({_off:true,regX:886.8,regY:325.4,x:72.8,y:325.4},1).wait(90).to({_off:false,regX:590.5,regY:318.8,x:665.5,y:320.8},29,cjs.Ease.circInOut).to({_off:true,regX:600,regY:393.5,x:600,y:393.5},1).wait(90));
+	this.timeline.addTween(cjs.Tween.get(this.instance_31).wait(239).to({_off:false},1).to({x:886.8,alpha:1},89,cjs.Ease.sineInOut).to({startPosition:0},1).to({_off:true,regX:590.5,regY:318.8,x:665.5,y:320.8,alpha:0},29,cjs.Ease.circInOut).wait(91));
+	this.timeline.addTween(cjs.Tween.get(this.instance_32).wait(359).to({_off:false},1).to({x:360,y:246.5,alpha:1},59,cjs.Ease.quadOut).to({startPosition:0},1).wait(1).to({x:368.35,y:251.6,alpha:0.9654},0).wait(1).to({x:376.65,y:256.7,alpha:0.9308},0).wait(1).to({x:384.9,y:261.8,alpha:0.8963},0).wait(1).to({x:393.2,y:266.85,alpha:0.8617},0).wait(1).to({x:401.5,y:271.95,alpha:0.8271},0).wait(1).to({x:409.8,y:277,alpha:0.7926},0).wait(1).to({x:418.1,y:282.1,alpha:0.758},0).wait(1).to({x:426.4,y:287.15,alpha:0.7235},0).wait(1).to({x:434.65,y:292.25,alpha:0.689},0).wait(1).to({x:442.95,y:297.3,alpha:0.6544},0).wait(1).to({x:451.25,y:302.4,alpha:0.6199},0).wait(1).to({x:459.5,y:307.45,alpha:0.5854},0).wait(1).to({x:467.8,y:312.55,alpha:0.5509},0).wait(1).to({x:476.1,y:317.6,alpha:0.5164},0).wait(1).to({x:484.35,y:322.7,alpha:0.482},0).wait(1).to({x:492.65,y:327.75,alpha:0.4475},0).wait(1).to({x:500.9,y:332.8,alpha:0.413},0).wait(1).to({x:509.15,y:337.9,alpha:0.3786},0).wait(1).to({x:517.45,y:342.95,alpha:0.3441},0).wait(1).to({x:525.7,y:348,alpha:0.3097},0).wait(1).to({x:533.95,y:353.05,alpha:0.2752},0).wait(1).to({x:542.25,y:358.15,alpha:0.2408},0).wait(1).to({x:550.5,y:363.2,alpha:0.2064},0).wait(1).to({x:558.75,y:368.25,alpha:0.172},0).wait(1).to({x:567,y:373.3,alpha:0.1376},0).wait(1).to({x:575.25,y:378.35,alpha:0.1032},0).wait(1).to({x:583.5,y:383.4,alpha:0.0688},0).wait(1).to({x:591.75,y:388.45,alpha:0.0344},0).wait(1).to({x:600,y:393.5,alpha:0},0).wait(1));
 
 	// 背景_补色
 	this.shape = new cjs.Shape();
@@ -8355,7 +8361,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_.png?1586170257634", id:"index_atlas_"}
+		{src:"images/index_atlas_.png", id:"index_atlas_"}
 	],
 	preloads: []
 };
