@@ -6,8 +6,7 @@
 ***
 ### 待疫情退去,一起去武汉赏花吧!
 ***
-***
  [点此链接预览](https://chinese-gemini-star.github.io/Looking-forward-to-the-beautiful-flowers/)  
-### (初次打开可能需要较长时间加载)
+ (初次打开可能需要较长时间加载)
 ***
 ### Made By Gemini Star(戴亮)
