@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"抗疫情主题动画_HTML5 Canvas_atlas_", frames: [[2596,1470,775,128],[1747,1470,847,202],[1747,1811,783,137],[2070,1950,793,127],[1202,2015,866,200],[1747,1674,802,135],[0,0,4000,1468],[0,1470,1200,787],[1202,1470,543,543]]}
+		{name:"index_atlas_", frames: [[2596,1470,775,128],[1747,1470,847,202],[1747,1811,783,137],[2070,1950,793,127],[1202,2015,866,200],[1747,1674,802,135],[0,0,4000,1468],[0,1470,1200,787],[1202,1470,543,543]]}
 ];
 
 
@@ -12,63 +12,63 @@ lib.ssMetadata = [
 
 
 (lib.山花烂漫 = function() {
-	this.initialize(ss["抗疫情主题动画_HTML5 Canvas_atlas_"]);
+	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.山花烂漫sDropShadow = function() {
-	this.initialize(ss["抗疫情主题动画_HTML5 Canvas_atlas_"]);
+	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.山花烂漫sOuterStroke = function() {
-	this.initialize(ss["抗疫情主题动画_HTML5 Canvas_atlas_"]);
+	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.翘首以盼 = function() {
-	this.initialize(ss["抗疫情主题动画_HTML5 Canvas_atlas_"]);
+	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.翘首以盼sDropShadow = function() {
-	this.initialize(ss["抗疫情主题动画_HTML5 Canvas_atlas_"]);
+	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.翘首以盼sOuterStroke = function() {
-	this.initialize(ss["抗疫情主题动画_HTML5 Canvas_atlas_"]);
+	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.背景2jfif = function() {
-	this.initialize(ss["抗疫情主题动画_HTML5 Canvas_atlas_"]);
+	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.背景3 = function() {
-	this.initialize(ss["抗疫情主题动画_HTML5 Canvas_atlas_"]);
+	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.返回图标 = function() {
-	this.initialize(ss["抗疫情主题动画_HTML5 Canvas_atlas_"]);
+	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(8);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
@@ -7662,7 +7662,7 @@ p.nominalBounds = new cjs.Rectangle(-151.4,-63.9,303.1,126);
 
 
 // stage content:
-(lib.抗疫情主题动画_HTML5Canvas = function(mode,startPosition,loop) {
+(lib.index = function(mode,startPosition,loop) {
 if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
@@ -8367,7 +8367,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/抗疫情主题动画_HTML5 Canvas_atlas_.png", id:"抗疫情主题动画_HTML5 Canvas_atlas_"}
+		{src:"images/index_atlas_.png", id:"index_atlas_"}
 	],
 	preloads: []
 };
