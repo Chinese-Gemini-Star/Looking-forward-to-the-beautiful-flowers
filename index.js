@@ -8297,7 +8297,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// 返回按钮
 	this.instance_28 = new lib.返回按钮();
-	this.instance_28.setTransform(861.05,21.6);
+	this.instance_28.setTransform(861.05,27.6);
 	this.instance_28.alpha = 0;
 	this.instance_28._off = true;
 	new cjs.ButtonHelper(this.instance_28, 0, 1, 2, false, new lib.返回按钮(), 3);
@@ -8307,8 +8307,8 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.back4._off = true;
 	new cjs.ButtonHelper(this.back4, 0, 1, 2, false, new lib.返回按钮(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_28).wait(389).to({_off:false},0).to({_off:true,x:862.05,y:27.6,alpha:1},30).wait(31));
-	this.timeline.addTween(cjs.Tween.get(this.back4).wait(389).to({_off:false},30).to({x:861.05,y:21.6},2).to({alpha:0},28).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_28).wait(389).to({_off:false},0).to({_off:true,x:862.05,alpha:1},30).wait(31));
+	this.timeline.addTween(cjs.Tween.get(this.back4).wait(389).to({_off:false},30).to({x:861.05},2).to({alpha:0},28).wait(1));
 
 	// 外部框架
 	this.instance_29 = new lib.框架背景("synched",0);
