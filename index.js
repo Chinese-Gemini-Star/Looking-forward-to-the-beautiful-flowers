@@ -8093,8 +8093,11 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 		var wrong =0;
 		// console.log(questionBank[0].getTitle());
 		
+		isAnswerQuestion = true;
+		
 		function backHome() {
 			// 返回
+			isAnswerQuestion = false;
 			that.play();
 		}
 		
@@ -8299,14 +8302,14 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// 返回
 	this.instance_9 = new lib.返回按钮();
-	this.instance_9.setTransform(872.7,42.7,1,1,0,0,0,18.7,18.7);
+	this.instance_9.setTransform(918.95,42.7,1,1,0,0,0,18.7,18.7);
 	this.instance_9.alpha = 0;
 	this.instance_9._off = true;
 	new cjs.ButtonHelper(this.instance_9, 0, 1, 2, false, new lib.返回按钮(), 3);
 
 	this.back3 = new lib.返回按钮();
 	this.back3.name = "back3";
-	this.back3.setTransform(872.7,42.7,1,1,0,0,0,18.7,18.7);
+	this.back3.setTransform(918.95,42.7,1,1,0,0,0,18.7,18.7);
 	this.back3._off = true;
 	new cjs.ButtonHelper(this.back3, 0, 1, 2, false, new lib.返回按钮(), 3);
 
@@ -8563,19 +8566,19 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// 返回按钮
 	this.instance_26 = new lib.返回按钮();
-	this.instance_26.setTransform(861.05,27.6);
+	this.instance_26.setTransform(903.3,27.6);
 	this.instance_26.alpha = 0;
 	this.instance_26._off = true;
 	new cjs.ButtonHelper(this.instance_26, 0, 1, 2, false, new lib.返回按钮(), 3);
 
 	this.back4 = new lib.返回按钮();
 	this.back4.name = "back4";
-	this.back4.setTransform(862.05,27.6);
+	this.back4.setTransform(903.3,27.6);
 	this.back4._off = true;
 	new cjs.ButtonHelper(this.back4, 0, 1, 2, false, new lib.返回按钮(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_26).wait(389).to({_off:false},0).to({_off:true,x:862.05,alpha:1},30).wait(121));
-	this.timeline.addTween(cjs.Tween.get(this.back4).wait(389).to({_off:false},30).to({x:861.05},2).to({alpha:0},28).to({_off:true},1).wait(90));
+	this.timeline.addTween(cjs.Tween.get(this.instance_26).wait(389).to({_off:false},0).to({_off:true,alpha:1},30).wait(121));
+	this.timeline.addTween(cjs.Tween.get(this.back4).wait(389).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(90));
 
 	// 外部框架
 	this.instance_27 = new lib.框架背景("synched",0);
@@ -8588,7 +8591,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	// 返回
 	this.back5 = new lib.返回按钮();
 	this.back5.name = "back5";
-	this.back5.setTransform(843.4,24.3);
+	this.back5.setTransform(904.65,24.3);
 	this.back5.alpha = 0;
 	this.back5._off = true;
 	new cjs.ButtonHelper(this.back5, 0, 1, 2, false, new lib.返回按钮(), 3);

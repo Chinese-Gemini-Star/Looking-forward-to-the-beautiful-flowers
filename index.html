@@ -24,7 +24,8 @@
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script src="index.js"></script>
 <script>
-/**
+// Global Scripts
+	/**
   * 将基于1的帧编号转为基于0的帧编号
   */
 function transformFrameNumber(frameNumber) {
@@ -77,7 +78,9 @@ var isAbout;
 // 开始进入界面判断
 var whatToDo;
 // 是否自动继续主界面
-var isNext = false;</script>
+var isNext = false;
+// 是否正在答题
+var isAnswerQuestion = false;</script>
 <script type='text/javascript' src='libs/questionBank.js'></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
@@ -108,15 +111,15 @@ function handleComplete(evt,comp) {
 	}
 	exportRoot = new lib.index();
 	stage = new lib.Stage(canvas);
-	stage.enableMouseOver();
+	stage.enableMouseOver();	
 	//Registers the "tick" event listener.
 	fnStartAnimation = function() {
 		stage.addChild(exportRoot);
 		createjs.Ticker.framerate = lib.properties.fps;
 		createjs.Ticker.addEventListener("tick", stage);
-	}
+	}	    
 	//Code to support hidpi screens and responsive scaling.
-	AdobeAn.makeResponsive(true,'both',true,1,[canvas,anim_container,dom_overlay_container]);
+	AdobeAn.makeResponsive(true,'both',true,1,[canvas,anim_container,dom_overlay_container]);	
 	AdobeAn.compositionLoaded(lib.properties.id);
 	fnStartAnimation();
 }
