@@ -8093,11 +8093,11 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 		var wrong =0;
 		// console.log(questionBank[0].getTitle());
 		
-		isAnswerQuestion = true;
+		changeBGM("sounds/高梨康治たかなしやすはる_刃yaibaヤイバ千軍万馬.mp3");
 		
 		function backHome() {
 			// 返回
-			isAnswerQuestion = false;
+			changeBGM("sounds/高梨康治_刃yaiba悲壮.mp3");
 			that.play();
 		}
 		
