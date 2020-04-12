@@ -7821,6 +7821,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 		this.about.addEventListener("click", About);
 		
 		changeBGM("sounds/高梨康治_刃yaiba悲壮.mp3");
+		playPause();
 
 		function Begin() {
 			// 开始
