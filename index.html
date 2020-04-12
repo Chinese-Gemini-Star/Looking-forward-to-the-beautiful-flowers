@@ -24,13 +24,53 @@
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script src="index.js"></script>
 <script>
-// Global Scripts
-	/**
+/**
   * 将基于1的帧编号转为基于0的帧编号
   */
 function transformFrameNumber(frameNumber) {
 	// 减1并输出
 	return frameNumber - 1;
+}
+/**
+  * 将1-10的数字转为汉字字符串
+  */
+function numberToChinese(number) {
+	var Chinese;
+	switch(number) {
+		case 1 :
+			Chinese = "一";
+			break;
+		case 2 :
+			Chinese = "二";
+			break;
+		case 3 :
+			Chinese = "三";
+			break;
+		case 4 :
+			Chinese = "四";
+			break;
+		case 5 :
+			Chinese = "五";
+			break;
+		case 6 :
+			Chinese = "六";
+			break;
+		case 7 :
+			Chinese = "七";
+			break;
+		case 8 :
+			Chinese = "八";
+			break;
+		case 9 :
+			Chinese = "九";
+			break;
+		case 10 :
+			Chinese = "十";
+			break;
+		default :
+			Chinese = "n/a";
+	}
+	return Chinese;
 }
 // 开始和关于区分
 var isAbout;
@@ -38,6 +78,7 @@ var isAbout;
 var whatToDo;
 // 是否自动继续主界面
 var isNext = false;</script>
+<script type='text/javascript' src='libs/questionBank.js'></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
@@ -67,15 +108,15 @@ function handleComplete(evt,comp) {
 	}
 	exportRoot = new lib.index();
 	stage = new lib.Stage(canvas);
-	stage.enableMouseOver();	
+	stage.enableMouseOver();
 	//Registers the "tick" event listener.
 	fnStartAnimation = function() {
 		stage.addChild(exportRoot);
 		createjs.Ticker.framerate = lib.properties.fps;
 		createjs.Ticker.addEventListener("tick", stage);
-	}	    
+	}
 	//Code to support hidpi screens and responsive scaling.
-	AdobeAn.makeResponsive(true,'both',true,1,[canvas,anim_container,dom_overlay_container]);	
+	AdobeAn.makeResponsive(true,'both',true,1,[canvas,anim_container,dom_overlay_container]);
 	AdobeAn.compositionLoaded(lib.properties.id);
 	fnStartAnimation();
 }

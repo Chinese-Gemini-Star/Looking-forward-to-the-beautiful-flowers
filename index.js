@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"index_atlas_", frames: [[2596,1470,775,128],[1747,1470,847,202],[1747,1811,783,137],[2070,1950,793,127],[1202,2015,866,200],[1747,1674,802,135],[0,0,4000,1468],[0,1470,1200,787],[1202,1470,543,543]]}
+		{name:"index_atlas_", frames: [[0,2186,775,128],[3149,1672,847,202],[3149,2013,783,137],[2604,2152,793,127],[3149,1470,866,200],[3149,1876,802,135],[0,0,4000,1468],[1402,1470,1200,787],[0,1470,1400,714],[2604,1470,543,543]]}
 ];
 
 
@@ -67,9 +67,16 @@ lib.ssMetadata = [
 
 
 
-(lib.返回图标 = function() {
+(lib.背景4 = function() {
 	this.initialize(ss["index_atlas_"]);
 	this.gotoAndStop(8);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.返回图标 = function() {
+	this.initialize(ss["index_atlas_"]);
+	this.gotoAndStop(9);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
 
@@ -155,6 +162,20 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(0,0,37.3,37.3);
+
+
+(lib.背景4_1 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// 图层_1
+	this.instance = new lib.背景4();
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,1400,714);
 
 
 (lib.背景3_1 = function(mode,startPosition,loop) {
@@ -6178,6 +6199,41 @@ p.nominalBounds = new cjs.Rectangle(0,0,1773.6,650.9);
 p.nominalBounds = new cjs.Rectangle(0,0,1181,637.6);
 
 
+(lib.题目 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// 图层_1
+	this.text = new cjs.Text("第一题\n出现什么症状可能感染了新型冠状病毒？", "45px 'FZCuHeiSongS-B-GB'", "#FF0000");
+	this.text.name = "text";
+	this.text.lineHeight = 57;
+	this.text.lineWidth = 890;
+	this.text.parent = this;
+	this.text.setTransform(2,2);
+
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,893.6,176.4);
+
+
+(lib.按钮背景 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// 图层_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFCCCC").s().p("EhDyAF9QhkAAAAhkIAAoxQAAhkBkAAMCHlAAAQBkAAAABkIAAIxQAABkhkAAg");
+	this.shape.setTransform(443.875,38.1);
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,887.8,76.2);
+
+
 (lib.相关组织与机构 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -7433,6 +7489,96 @@ p.nominalBounds = new cjs.Rectangle(-150.4,-63.9,300.9,126);
 p.nominalBounds = new cjs.Rectangle(-155,-57.9,304.5,126);
 
 
+(lib.选项C = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// 文字
+	this.text = new cjs.Text("C.发热、乏力、干咳、呼吸困难等", "45px 'FZCuHeiSongS-B-GB'", "#FF0000");
+	this.text.name = "text";
+	this.text.lineHeight = 57;
+	this.text.lineWidth = 865;
+	this.text.parent = this;
+	this.text.setTransform(-440.55,-89.2);
+
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(4));
+
+	// 按钮背景
+	this.instance = new lib.按钮背景();
+	this.instance.setTransform(-6.9,-60.95,1,1,0,0,0,443.9,38.1);
+	new cjs.ButtonHelper(this.instance, 0, 1, 1);
+
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FF0000").s().p("EhDyAF9QhkAAAAhkIAAoxQAAhkBkAAMCHlAAAQBkAAAABkIAAIxQAABkhkAAg");
+	this.shape.setTransform(-6.925,-60.95);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.shape}]},2).to({state:[{t:this.instance}]},1).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-450.8,-99,887.8,76.2);
+
+
+(lib.选项B = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// 文字
+	this.text = new cjs.Text("B.腹泻、食欲不振", "45px 'FZCuHeiSongS-B-GB'", "#FF0000");
+	this.text.name = "text";
+	this.text.lineHeight = 57;
+	this.text.lineWidth = 865;
+	this.text.parent = this;
+	this.text.setTransform(-440.55,-89.2);
+
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(4));
+
+	// 按钮背景
+	this.instance = new lib.按钮背景();
+	this.instance.setTransform(-6.9,-60.95,1,1,0,0,0,443.9,38.1);
+	new cjs.ButtonHelper(this.instance, 0, 1, 1);
+
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FF0000").s().p("EhDyAF9QhkAAAAhkIAAoxQAAhkBkAAMCHlAAAQBkAAAABkIAAIxQAABkhkAAg");
+	this.shape.setTransform(-6.925,-60.95);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.shape}]},2).to({state:[{t:this.instance}]},1).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-450.8,-99,887.8,76.2);
+
+
+(lib.选项A = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// 文字
+	this.text = new cjs.Text("A.流鼻涕、打喷嚏", "45px 'FZCuHeiSongS-B-GB'", "#FF0000");
+	this.text.name = "text";
+	this.text.lineHeight = 57;
+	this.text.lineWidth = 865;
+	this.text.parent = this;
+	this.text.setTransform(-440.55,-89.2);
+
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(4));
+
+	// 按钮背景
+	this.instance = new lib.按钮背景();
+	this.instance.setTransform(-6.9,-60.95,1,1,0,0,0,443.9,38.1);
+	new cjs.ButtonHelper(this.instance, 0, 1, 1);
+
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FF0000").s().p("EhDyAF9QhkAAAAhkIAAoxQAAhkBkAAMCHlAAAQBkAAAABkIAAIxQAABkhkAAg");
+	this.shape.setTransform(-6.925,-60.95);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.shape}]},2).to({state:[{t:this.instance}]},1).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-450.8,-99,887.8,76.2);
+
+
 (lib.关于_文字psd = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -7666,6 +7812,26 @@ p.nominalBounds = new cjs.Rectangle(-151.4,-63.9,303.1,126);
 if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
+	this.frame_0 = function() {
+		// 绑定当前对象
+		var that = this;
+		
+		// 添加按钮监听
+		this.begin.addEventListener("click", Begin);
+		this.about.addEventListener("click", About);
+		
+		function Begin() {
+			// 开始
+			isAbout = false;
+			isNext = true;
+		}
+		
+		function About() {
+			// 关于
+			isAbout = true;
+			isNext = true;
+		}
+	}
 	this.frame_58 = function() {
 		// 绑定当前对象
 		var that = this;
@@ -7676,22 +7842,24 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 		
 		if (isNext) {
 			isNext = false;
-			Begin();
+			this.play();
 		}
 		
 		// 添加按钮监听
-		this.begin.addEventListener("click", Begin);
-		this.about.addEventListener("click", About);
+		this.begin2.addEventListener("click", Begin);
+		this.about2.addEventListener("click", About);
 		
 		function Begin() {
 			// 开始
 			isAbout = false;
+			isNext = false;
 			that.play();
 		}
 		
 		function About() {
 			// 关于
 			isAbout = true;
+			isNext = false;
 			that.play();
 		}
 	}
@@ -7753,7 +7921,8 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 		
 		function AnswerVirusQuestion() {
 			// 病毒知识竞答
-			
+			whatToDo = "VirusKnowledgeCompetition";
+			that.play();
 		}
 	}
 	this.frame_239 = function() {
@@ -7770,6 +7939,10 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 			case "IntroduceTheExpressionOfVirusRelatedEnglish":
 				// 前往病毒相关英文表达
 				this.gotoAndPlay(transformFrameNumber(361));
+				break;
+			case "VirusKnowledgeCompetition":
+				// 前往病毒知识竞答
+				this.gotoAndPlay(transformFrameNumber(451));
 				break;
 			default:
 				this.stop();
@@ -7899,142 +8072,220 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 		isNext = true;
 		this.gotoAndPlay(transformFrameNumber(1));
 	}
+	this.frame_509 = function() {
+		// 绑定当前对象
+		var that = this;
+		
+		// 停止播放
+		this.stop();
+		
+		// 添加按钮监听
+		this.back5.addEventListener("click", backHome);
+		this.A.addEventListener("click", ClickA);
+		this.B.addEventListener("click", ClickB);
+		this.C.addEventListener("click", ClickC);
+		
+		// 当前题号
+		var id = 0;
+		// 做对题数
+		var right = 0;
+		// 做错题数
+		var wrong =0;
+		// console.log(questionBank[0].getTitle());
+		
+		function backHome() {
+			// 返回
+			that.play();
+		}
+		
+		function ClickA() {
+			// 选中A
+			flush("A");
+		}
+		
+		function ClickB() {
+			// 选中B
+			flush("B");
+		}
+		
+		function ClickC() {
+			// 选中C
+			flush("C");
+		}
+		
+		function flush(answer) {
+			// 判断是否正确
+			if (questionBank[id].isRight(answer)) {
+				right++;
+				alert("回答正确");
+			}else {
+				wrong++;
+				alert("回答错误\r\n" + "正确答案为:" + questionBank[id].getAnswer() + "\r\n解析:" + questionBank[id].getAnalysis());
+			}
+			// 判断是否做完
+			if (id == 9) {
+				var mark = 10 * right;
+				alert("你已完成所有题目,你的成绩为:" + mark + "分\r\n共做对" + right + "题,做错" + wrong + "题");
+				backHome();
+				return;
+			}
+			// 刷新页面
+			that.title.text.text = "第" + numberToChinese(++id + 1) + "题\r\n" + questionBank[id].getTitle();
+			that.A.text.text = "A." + questionBank[id].getA();
+			that.B.text.text = "B." + questionBank[id].getB();
+			that.C.text.text = "C." + questionBank[id].getC();
+		}
+	}
+	this.frame_539 = function() {
+		// 返回首页
+		isNext = true;
+		this.gotoAndPlay(transformFrameNumber(1));
+	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).wait(58).call(this.frame_58).wait(61).call(this.frame_119).wait(30).call(this.frame_149).wait(30).call(this.frame_179).wait(29).call(this.frame_208).wait(31).call(this.frame_239).wait(91).call(this.frame_330).wait(29).call(this.frame_359).wait(61).call(this.frame_420).wait(29).call(this.frame_449).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(58).call(this.frame_58).wait(61).call(this.frame_119).wait(30).call(this.frame_149).wait(30).call(this.frame_179).wait(29).call(this.frame_208).wait(31).call(this.frame_239).wait(91).call(this.frame_330).wait(29).call(this.frame_359).wait(61).call(this.frame_420).wait(29).call(this.frame_449).wait(60).call(this.frame_509).wait(30).call(this.frame_539).wait(1));
 
 	// 标题
 	this.instance = new lib.首页文字psd("synched",0);
 	this.instance.setTransform(485.05,210.1,0.5009,0.5009,0,0,0,887.1,695.9);
 	this.instance.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({alpha:1},59,cjs.Ease.circOut).to({alpha:0},60,cjs.Ease.quadIn).to({_off:true},1).wait(330));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({alpha:1},59,cjs.Ease.none).to({alpha:0},60,cjs.Ease.quadIn).to({_off:true},1).wait(420));
 
 	// 开始
-	this.instance_1 = new lib.开始();
-	this.instance_1.setTransform(226.15,518.2,0.8404,0.8404);
-	this.instance_1.alpha = 0;
-	new cjs.ButtonHelper(this.instance_1, 0, 1, 2, false, new lib.开始(), 3);
-
 	this.begin = new lib.开始();
+	this.begin.name = "begin";
 	this.begin.setTransform(226.15,518.2,0.8404,0.8404);
-	this.begin.alpha = 0.9883;
-	this.begin._off = true;
+	this.begin.alpha = 0;
 	new cjs.ButtonHelper(this.begin, 0, 1, 2, false, new lib.开始(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).to({_off:true,alpha:0.9883},58,cjs.Ease.circOut).wait(392));
-	this.timeline.addTween(cjs.Tween.get(this.begin).to({_off:false},58,cjs.Ease.circOut).to({alpha:1},1).to({alpha:0},60,cjs.Ease.quadIn).to({_off:true},1).wait(330));
+	this.begin2 = new lib.开始();
+	this.begin2.name = "begin2";
+	this.begin2.setTransform(226.15,518.2,0.8404,0.8404);
+	this.begin2.alpha = 0.9883;
+	this.begin2._off = true;
+	new cjs.ButtonHelper(this.begin2, 0, 1, 2, false, new lib.开始(), 3);
+
+	this.timeline.addTween(cjs.Tween.get(this.begin).to({_off:true,alpha:0.9883},58,cjs.Ease.none).wait(482));
+	this.timeline.addTween(cjs.Tween.get(this.begin2).to({_off:false},58,cjs.Ease.none).to({alpha:1},1).to({alpha:0},60,cjs.Ease.quadIn).to({_off:true},1).wait(420));
 
 	// 关于
-	this.instance_2 = new lib.关于_1();
-	this.instance_2.setTransform(744.65,523.25,0.8405,0.8405);
-	this.instance_2.alpha = 0;
-	new cjs.ButtonHelper(this.instance_2, 0, 1, 2, false, new lib.关于_1(), 3);
-
 	this.about = new lib.关于_1();
+	this.about.name = "about";
 	this.about.setTransform(744.65,523.25,0.8405,0.8405);
-	this.about._off = true;
+	this.about.alpha = 0;
 	new cjs.ButtonHelper(this.about, 0, 1, 2, false, new lib.关于_1(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).to({_off:true,alpha:1},58,cjs.Ease.circOut).wait(392));
-	this.timeline.addTween(cjs.Tween.get(this.about).to({_off:false},58,cjs.Ease.circOut).wait(1).to({alpha:0},60,cjs.Ease.quadIn).to({_off:true},1).wait(330));
+	this.about2 = new lib.关于_1();
+	this.about2.name = "about2";
+	this.about2.setTransform(744.65,523.25,0.8405,0.8405);
+	this.about2._off = true;
+	new cjs.ButtonHelper(this.about2, 0, 1, 2, false, new lib.关于_1(), 3);
+
+	this.timeline.addTween(cjs.Tween.get(this.about).to({_off:true,alpha:1},58,cjs.Ease.none).wait(482));
+	this.timeline.addTween(cjs.Tween.get(this.about2).to({_off:false},58,cjs.Ease.none).wait(1).to({alpha:0},60,cjs.Ease.quadIn).to({_off:true},1).wait(420));
 
 	// 文字
-	this.instance_3 = new lib.关于_文字psd("synched",0);
-	this.instance_3.setTransform(484.95,275.55,0.5813,0.5813,0,0,0,923.1,601.2);
-	this.instance_3.alpha = 0;
-	this.instance_3._off = true;
+	this.instance_1 = new lib.关于_文字psd("synched",0);
+	this.instance_1.setTransform(484.95,275.55,0.5813,0.5813,0,0,0,923.1,601.2);
+	this.instance_1.alpha = 0;
+	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(119).to({_off:false},0).to({x:487.5,alpha:1},30).to({startPosition:0},1).to({x:484.95,alpha:0},29).to({_off:true},1).wait(270));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(119).to({_off:false},0).to({x:487.5,alpha:1},30).to({startPosition:0},1).to({x:484.95,alpha:0},29).to({_off:true},1).wait(360));
 
 	// 返回
-	this.instance_4 = new lib.返回();
-	this.instance_4.setTransform(453.2,554.7,0.6622,0.6622);
-	this.instance_4.alpha = 0;
-	this.instance_4._off = true;
-	new cjs.ButtonHelper(this.instance_4, 0, 1, 2, false, new lib.返回(), 3);
+	this.instance_2 = new lib.返回();
+	this.instance_2.setTransform(453.2,554.7,0.6622,0.6622);
+	this.instance_2.alpha = 0;
+	this.instance_2._off = true;
+	new cjs.ButtonHelper(this.instance_2, 0, 1, 2, false, new lib.返回(), 3);
 
 	this.back = new lib.返回();
+	this.back.name = "back";
 	this.back.setTransform(453.2,554.7,0.6622,0.6622);
 	this.back._off = true;
 	new cjs.ButtonHelper(this.back, 0, 1, 2, false, new lib.返回(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(119).to({_off:false},0).to({_off:true,alpha:1},30).wait(301));
-	this.timeline.addTween(cjs.Tween.get(this.back).wait(119).to({_off:false},30).wait(1).to({alpha:0},29).to({_off:true},1).wait(270));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(119).to({_off:false},0).to({_off:true,alpha:1},30).wait(391));
+	this.timeline.addTween(cjs.Tween.get(this.back).wait(119).to({_off:false},30).wait(1).to({alpha:0},29).to({_off:true},1).wait(360));
 
 	// 标题
-	this.instance_5 = new lib.首页文字psd("synched",0);
-	this.instance_5.setTransform(595.45,274.75,0.4082,0.4082,0,0,0,887.1,696);
-	this.instance_5.alpha = 0;
-	this.instance_5._off = true;
+	this.instance_3 = new lib.首页文字psd("synched",0);
+	this.instance_3.setTransform(595.45,274.75,0.4082,0.4082,0,0,0,887.1,696);
+	this.instance_3.alpha = 0;
+	this.instance_3._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(180).to({_off:false},0).to({alpha:1},28).to({alpha:0.9688},1).to({alpha:0},30).to({_off:true},1).wait(210));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(180).to({_off:false},0).to({alpha:1},28).to({alpha:0.9688},1).to({alpha:0},30).to({_off:true},1).wait(300));
 
 	// 病毒介绍
-	this.instance_6 = new lib.病毒介绍();
-	this.instance_6.setTransform(148.35,130.35,0.5862,0.5861,0,0,0,0.1,0);
-	this.instance_6.alpha = 0;
-	this.instance_6._off = true;
-	new cjs.ButtonHelper(this.instance_6, 0, 1, 2, false, new lib.病毒介绍(), 3);
+	this.instance_4 = new lib.病毒介绍();
+	this.instance_4.setTransform(148.35,130.35,0.5862,0.5861,0,0,0,0.1,0);
+	this.instance_4.alpha = 0;
+	this.instance_4._off = true;
+	new cjs.ButtonHelper(this.instance_4, 0, 1, 2, false, new lib.病毒介绍(), 3);
 
 	this.virusIntroduction = new lib.病毒介绍();
+	this.virusIntroduction.name = "virusIntroduction";
 	this.virusIntroduction.setTransform(148.35,130.35,0.5862,0.5861,0,0,0,0.1,0);
 	this.virusIntroduction._off = true;
 	new cjs.ButtonHelper(this.virusIntroduction, 0, 1, 2, false, new lib.病毒介绍(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(180).to({_off:false},0).to({_off:true,alpha:1},28).wait(242));
-	this.timeline.addTween(cjs.Tween.get(this.virusIntroduction).wait(180).to({_off:false},28).wait(1).to({alpha:0},30).to({_off:true},1).wait(210));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(180).to({_off:false},0).to({_off:true,alpha:1},28).wait(332));
+	this.timeline.addTween(cjs.Tween.get(this.virusIntroduction).wait(180).to({_off:false},28).wait(1).to({alpha:0},30).to({_off:true},1).wait(300));
 
 	// 病毒相关英文表达
-	this.instance_7 = new lib.世界病毒防治();
-	this.instance_7.setTransform(148.35,266.5,0.5862,0.5861,0,0,0,0.1,0.1);
-	this.instance_7.alpha = 0;
-	this.instance_7._off = true;
-	new cjs.ButtonHelper(this.instance_7, 0, 1, 2, false, new lib.世界病毒防治(), 3);
+	this.instance_5 = new lib.世界病毒防治();
+	this.instance_5.setTransform(148.35,266.5,0.5862,0.5861,0,0,0,0.1,0.1);
+	this.instance_5.alpha = 0;
+	this.instance_5._off = true;
+	new cjs.ButtonHelper(this.instance_5, 0, 1, 2, false, new lib.世界病毒防治(), 3);
 
 	this.englishVirus_associatedExpression = new lib.世界病毒防治();
+	this.englishVirus_associatedExpression.name = "englishVirus_associatedExpression";
 	this.englishVirus_associatedExpression.setTransform(148.35,266.5,0.5862,0.5861,0,0,0,0.1,0.1);
 	this.englishVirus_associatedExpression._off = true;
 	new cjs.ButtonHelper(this.englishVirus_associatedExpression, 0, 1, 2, false, new lib.世界病毒防治(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(180).to({_off:false},0).to({_off:true,alpha:1},28).wait(242));
-	this.timeline.addTween(cjs.Tween.get(this.englishVirus_associatedExpression).wait(180).to({_off:false},28).wait(1).to({alpha:0},30).to({_off:true},1).wait(210));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(180).to({_off:false},0).to({_off:true,alpha:1},28).wait(332));
+	this.timeline.addTween(cjs.Tween.get(this.englishVirus_associatedExpression).wait(180).to({_off:false},28).wait(1).to({alpha:0},30).to({_off:true},1).wait(300));
 
 	// 病毒知识竞赛
-	this.instance_8 = new lib.病毒知识竞答();
-	this.instance_8.setTransform(148.35,405.55,0.5862,0.5861,0,0,0,0.1,0.1);
-	this.instance_8.alpha = 0;
-	this.instance_8._off = true;
-	new cjs.ButtonHelper(this.instance_8, 0, 1, 2, false, new lib.病毒知识竞答(), 3);
+	this.instance_6 = new lib.病毒知识竞答();
+	this.instance_6.setTransform(148.35,405.55,0.5862,0.5861,0,0,0,0.1,0.1);
+	this.instance_6.alpha = 0;
+	this.instance_6._off = true;
+	new cjs.ButtonHelper(this.instance_6, 0, 1, 2, false, new lib.病毒知识竞答(), 3);
 
 	this.answerVirusQuestion = new lib.病毒知识竞答();
+	this.answerVirusQuestion.name = "answerVirusQuestion";
 	this.answerVirusQuestion.setTransform(148.35,405.55,0.5862,0.5861,0,0,0,0.1,0.1);
 	this.answerVirusQuestion._off = true;
 	new cjs.ButtonHelper(this.answerVirusQuestion, 0, 1, 2, false, new lib.病毒知识竞答(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(180).to({_off:false},0).to({_off:true,alpha:1},28).wait(242));
-	this.timeline.addTween(cjs.Tween.get(this.answerVirusQuestion).wait(180).to({_off:false},28).wait(1).to({alpha:0},30).to({_off:true},1).wait(210));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(180).to({_off:false},0).to({_off:true,alpha:1},28).wait(332));
+	this.timeline.addTween(cjs.Tween.get(this.answerVirusQuestion).wait(180).to({_off:false},28).wait(1).to({alpha:0},30).to({_off:true},1).wait(300));
 
 	// 返回
-	this.instance_9 = new lib.返回();
-	this.instance_9.setTransform(148.3,543.3,0.5861,0.5861);
-	this.instance_9.alpha = 0;
-	this.instance_9._off = true;
-	new cjs.ButtonHelper(this.instance_9, 0, 1, 2, false, new lib.返回(), 3);
+	this.instance_7 = new lib.返回();
+	this.instance_7.setTransform(148.3,543.3,0.5861,0.5861);
+	this.instance_7.alpha = 0;
+	this.instance_7._off = true;
+	new cjs.ButtonHelper(this.instance_7, 0, 1, 2, false, new lib.返回(), 3);
 
 	this.back2 = new lib.返回();
+	this.back2.name = "back2";
 	this.back2.setTransform(148.3,543.3,0.5861,0.5861);
 	this.back2._off = true;
 	new cjs.ButtonHelper(this.back2, 0, 1, 2, false, new lib.返回(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(180).to({_off:false},0).to({_off:true,alpha:1},28).wait(242));
-	this.timeline.addTween(cjs.Tween.get(this.back2).wait(180).to({_off:false},28).wait(1).to({alpha:0},30).to({_off:true},1).wait(210));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(180).to({_off:false},0).to({_off:true,alpha:1},28).wait(332));
+	this.timeline.addTween(cjs.Tween.get(this.back2).wait(180).to({_off:false},28).wait(1).to({alpha:0},30).to({_off:true},1).wait(300));
 
 	// 文本
-	this.instance_10 = new lib.内容("synched",0);
-	this.instance_10.setTransform(572.85,336.95,1,1,0,0,0,349.3,267.1);
-	this.instance_10.alpha = 0;
-	this.instance_10._off = true;
+	this.instance_8 = new lib.内容("synched",0);
+	this.instance_8.setTransform(572.85,336.95,1,1,0,0,0,349.3,267.1);
+	this.instance_8.alpha = 0;
+	this.instance_8._off = true;
 
 	this.text = new cjs.Text("2019新型冠状病毒（2019-nCoV），2020年1月12日被世界卫生组织命名。冠\n状病毒是一个大型病毒家族，已知可引起感冒以及中东呼吸综合征（MERS）\n和严重急性呼吸综合征（SARS）等较严重疾病。新型冠状病毒是以前从未在人\n体中发现的冠状病毒新毒株。\n\n2019年12月以来，湖北省武汉市持续开展流感及相关疾病监测，发现多起病毒\n性肺炎病例，均诊断为病毒性肺炎/肺部感染。 \n\n人感染了冠状病毒后常见体征有呼吸道症状、发热、咳嗽、气促和呼吸困难\n等。在较严重病例中，感染可导致肺炎、严重急性呼吸综合征、肾衰竭，甚至\n死亡。目前对于新型冠状病毒所致疾病没有特异治疗方法。但许多症状是可以\n处理的，因此需根据患者临床情况进行治疗。此外，对感染者的辅助护理可能\n非常有效。\n\n做好自我保护包括：保持基本的手部和呼吸道卫生，坚持安全饮食习惯，并尽\n可能避免与任何表现出有呼吸道疾病症状（如咳嗽和打喷嚏等）的人密切接\n触。", "20px 'FZCuHeiSongS-B-GB'", "#FF0000");
 	this.text.name = "text";
@@ -8043,172 +8294,182 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.text.parent = this;
 	this.text.setTransform(225.55,71.85);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_10}]},299).to({state:[{t:this.instance_10}]},30).to({state:[{t:this.text}]},1).to({state:[]},1).wait(119));
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(299).to({_off:false},0).to({alpha:1},30).to({_off:true,regX:0,regY:0,x:225.55,y:71.85,text:"2019新型冠状病毒（2019-nCoV），2020年1月12日被世界卫生组织命名。冠\n状病毒是一个大型病毒家族，已知可引起感冒以及中东呼吸综合征（MERS）\n和严重急性呼吸综合征（SARS）等较严重疾病。新型冠状病毒是以前从未在人\n体中发现的冠状病毒新毒株。\n\n2019年12月以来，湖北省武汉市持续开展流感及相关疾病监测，发现多起病毒\n性肺炎病例，均诊断为病毒性肺炎/肺部感染。 \n\n人感染了冠状病毒后常见体征有呼吸道症状、发热、咳嗽、气促和呼吸困难\n等。在较严重病例中，感染可导致肺炎、严重急性呼吸综合征、肾衰竭，甚至\n死亡。目前对于新型冠状病毒所致疾病没有特异治疗方法。但许多症状是可以\n处理的，因此需根据患者临床情况进行治疗。此外，对感染者的辅助护理可能\n非常有效。\n\n做好自我保护包括：保持基本的手部和呼吸道卫生，坚持安全饮食习惯，并尽\n可能避免与任何表现出有呼吸道疾病症状（如咳嗽和打喷嚏等）的人密切接\n触。",font:"20px 'FZCuHeiSongS-B-GB'",color:"#FF0000",textAlign:0,lineHeight:26.35,lineWidth:695},1).wait(120));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_8}]},299).to({state:[{t:this.instance_8}]},30).to({state:[{t:this.text}]},1).to({state:[]},1).wait(209));
+	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(299).to({_off:false},0).to({alpha:1},30).to({_off:true,regX:0,regY:0,x:225.55,y:71.85,text:"2019新型冠状病毒（2019-nCoV），2020年1月12日被世界卫生组织命名。冠\n状病毒是一个大型病毒家族，已知可引起感冒以及中东呼吸综合征（MERS）\n和严重急性呼吸综合征（SARS）等较严重疾病。新型冠状病毒是以前从未在人\n体中发现的冠状病毒新毒株。\n\n2019年12月以来，湖北省武汉市持续开展流感及相关疾病监测，发现多起病毒\n性肺炎病例，均诊断为病毒性肺炎/肺部感染。 \n\n人感染了冠状病毒后常见体征有呼吸道症状、发热、咳嗽、气促和呼吸困难\n等。在较严重病例中，感染可导致肺炎、严重急性呼吸综合征、肾衰竭，甚至\n死亡。目前对于新型冠状病毒所致疾病没有特异治疗方法。但许多症状是可以\n处理的，因此需根据患者临床情况进行治疗。此外，对感染者的辅助护理可能\n非常有效。\n\n做好自我保护包括：保持基本的手部和呼吸道卫生，坚持安全饮食习惯，并尽\n可能避免与任何表现出有呼吸道疾病症状（如咳嗽和打喷嚏等）的人密切接\n触。",font:"20px 'FZCuHeiSongS-B-GB'",color:"#FF0000",textAlign:0,lineHeight:26.35,lineWidth:695},1).wait(210));
 
 	// 返回
-	this.instance_11 = new lib.返回按钮();
-	this.instance_11.setTransform(872.7,42.7,1,1,0,0,0,18.7,18.7);
-	this.instance_11.alpha = 0;
-	this.instance_11._off = true;
-	new cjs.ButtonHelper(this.instance_11, 0, 1, 2, false, new lib.返回按钮(), 3);
+	this.instance_9 = new lib.返回按钮();
+	this.instance_9.setTransform(872.7,42.7,1,1,0,0,0,18.7,18.7);
+	this.instance_9.alpha = 0;
+	this.instance_9._off = true;
+	new cjs.ButtonHelper(this.instance_9, 0, 1, 2, false, new lib.返回按钮(), 3);
 
 	this.back3 = new lib.返回按钮();
+	this.back3.name = "back3";
 	this.back3.setTransform(872.7,42.7,1,1,0,0,0,18.7,18.7);
 	this.back3._off = true;
 	new cjs.ButtonHelper(this.back3, 0, 1, 2, false, new lib.返回按钮(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(121));
-	this.timeline.addTween(cjs.Tween.get(this.back3).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(90));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(211));
+	this.timeline.addTween(cjs.Tween.get(this.back3).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(180));
 
 	// 简介
-	this.instance_12 = new lib.简介();
-	this.instance_12.setTransform(119.45,66.2,0.5839,0.5045,0,0,0,0,0.1);
-	this.instance_12.alpha = 0;
-	this.instance_12._off = true;
-	new cjs.ButtonHelper(this.instance_12, 0, 1, 2, false, new lib.简介(), 3);
+	this.instance_10 = new lib.简介();
+	this.instance_10.setTransform(119.45,66.2,0.5839,0.5045,0,0,0,0,0.1);
+	this.instance_10.alpha = 0;
+	this.instance_10._off = true;
+	new cjs.ButtonHelper(this.instance_10, 0, 1, 2, false, new lib.简介(), 3);
 
 	this.summary = new lib.简介();
+	this.summary.name = "summary";
 	this.summary.setTransform(119.45,66.2,0.5839,0.5045,0,0,0,0,0.1);
 	this.summary._off = true;
 	new cjs.ButtonHelper(this.summary, 0, 1, 2, false, new lib.简介(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(121));
-	this.timeline.addTween(cjs.Tween.get(this.summary).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(90));
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(211));
+	this.timeline.addTween(cjs.Tween.get(this.summary).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(180));
 
 	// 易感人群
-	this.instance_13 = new lib.易感人群();
-	this.instance_13.setTransform(119.5,320.45,0.584,0.5044,0,0,0,0.1,0.2);
-	this.instance_13.alpha = 0;
-	this.instance_13._off = true;
-	new cjs.ButtonHelper(this.instance_13, 0, 1, 2, false, new lib.易感人群(), 3);
+	this.instance_11 = new lib.易感人群();
+	this.instance_11.setTransform(119.5,320.45,0.584,0.5044,0,0,0,0.1,0.2);
+	this.instance_11.alpha = 0;
+	this.instance_11._off = true;
+	new cjs.ButtonHelper(this.instance_11, 0, 1, 2, false, new lib.易感人群(), 3);
 
 	this.susceptiblePopulation = new lib.易感人群();
+	this.susceptiblePopulation.name = "susceptiblePopulation";
 	this.susceptiblePopulation.setTransform(119.5,320.45,0.584,0.5044,0,0,0,0.1,0.2);
 	this.susceptiblePopulation._off = true;
 	new cjs.ButtonHelper(this.susceptiblePopulation, 0, 1, 2, false, new lib.易感人群(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(121));
-	this.timeline.addTween(cjs.Tween.get(this.susceptiblePopulation).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(90));
+	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(211));
+	this.timeline.addTween(cjs.Tween.get(this.susceptiblePopulation).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(180));
 
 	// 传播途径
-	this.instance_14 = new lib.传播途径();
-	this.instance_14.setTransform(119.45,256.85,0.584,0.5044,0,0,0,0,0.1);
-	this.instance_14.alpha = 0;
-	this.instance_14._off = true;
-	new cjs.ButtonHelper(this.instance_14, 0, 1, 2, false, new lib.传播途径(), 3);
+	this.instance_12 = new lib.传播途径();
+	this.instance_12.setTransform(119.45,256.85,0.584,0.5044,0,0,0,0,0.1);
+	this.instance_12.alpha = 0;
+	this.instance_12._off = true;
+	new cjs.ButtonHelper(this.instance_12, 0, 1, 2, false, new lib.传播途径(), 3);
 
 	this.routeOfTransmission = new lib.传播途径();
+	this.routeOfTransmission.name = "routeOfTransmission";
 	this.routeOfTransmission.setTransform(119.45,256.85,0.584,0.5044,0,0,0,0,0.1);
 	this.routeOfTransmission._off = true;
 	new cjs.ButtonHelper(this.routeOfTransmission, 0, 1, 2, false, new lib.传播途径(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_14).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(121));
-	this.timeline.addTween(cjs.Tween.get(this.routeOfTransmission).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(90));
+	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(211));
+	this.timeline.addTween(cjs.Tween.get(this.routeOfTransmission).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(180));
 
 	// 主要症状
-	this.instance_15 = new lib.主要症状();
-	this.instance_15.setTransform(119.45,193.3,0.584,0.5044,0,0,0,0,0.1);
-	this.instance_15.alpha = 0;
-	this.instance_15._off = true;
-	new cjs.ButtonHelper(this.instance_15, 0, 1, 2, false, new lib.主要症状(), 3);
+	this.instance_13 = new lib.主要症状();
+	this.instance_13.setTransform(119.45,193.3,0.584,0.5044,0,0,0,0,0.1);
+	this.instance_13.alpha = 0;
+	this.instance_13._off = true;
+	new cjs.ButtonHelper(this.instance_13, 0, 1, 2, false, new lib.主要症状(), 3);
 
 	this.mainSymptoms = new lib.主要症状();
+	this.mainSymptoms.name = "mainSymptoms";
 	this.mainSymptoms.setTransform(119.45,193.3,0.584,0.5044,0,0,0,0,0.1);
 	this.mainSymptoms._off = true;
 	new cjs.ButtonHelper(this.mainSymptoms, 0, 1, 2, false, new lib.主要症状(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_15).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(121));
-	this.timeline.addTween(cjs.Tween.get(this.mainSymptoms).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(90));
+	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(211));
+	this.timeline.addTween(cjs.Tween.get(this.mainSymptoms).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(180));
 
 	// 发现经过
-	this.instance_16 = new lib.发现经过();
-	this.instance_16.setTransform(119.45,129.7,0.584,0.5044);
-	this.instance_16.alpha = 0;
-	this.instance_16._off = true;
-	new cjs.ButtonHelper(this.instance_16, 0, 1, 2, false, new lib.发现经过(), 3);
+	this.instance_14 = new lib.发现经过();
+	this.instance_14.setTransform(119.45,129.7,0.584,0.5044);
+	this.instance_14.alpha = 0;
+	this.instance_14._off = true;
+	new cjs.ButtonHelper(this.instance_14, 0, 1, 2, false, new lib.发现经过(), 3);
 
 	this.discovery = new lib.发现经过();
+	this.discovery.name = "discovery";
 	this.discovery.setTransform(119.45,129.7,0.584,0.5044);
 	this.discovery._off = true;
 	new cjs.ButtonHelper(this.discovery, 0, 1, 2, false, new lib.发现经过(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_16).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(121));
-	this.timeline.addTween(cjs.Tween.get(this.discovery).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(90));
+	this.timeline.addTween(cjs.Tween.get(this.instance_14).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(211));
+	this.timeline.addTween(cjs.Tween.get(this.discovery).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(180));
 
 	// 命名过程
-	this.instance_17 = new lib.命名过程();
-	this.instance_17.setTransform(119.45,447.5,0.584,0.5044,0,0,0,0,0.1);
-	this.instance_17.alpha = 0;
-	this.instance_17._off = true;
-	new cjs.ButtonHelper(this.instance_17, 0, 1, 2, false, new lib.命名过程(), 3);
+	this.instance_15 = new lib.命名过程();
+	this.instance_15.setTransform(119.45,447.5,0.584,0.5044,0,0,0,0,0.1);
+	this.instance_15.alpha = 0;
+	this.instance_15._off = true;
+	new cjs.ButtonHelper(this.instance_15, 0, 1, 2, false, new lib.命名过程(), 3);
 
 	this.namingProcedure = new lib.命名过程();
+	this.namingProcedure.name = "namingProcedure";
 	this.namingProcedure.setTransform(119.45,447.5,0.584,0.5044,0,0,0,0,0.1);
 	this.namingProcedure._off = true;
 	new cjs.ButtonHelper(this.namingProcedure, 0, 1, 2, false, new lib.命名过程(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_17).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(121));
-	this.timeline.addTween(cjs.Tween.get(this.namingProcedure).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(90));
+	this.timeline.addTween(cjs.Tween.get(this.instance_15).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(211));
+	this.timeline.addTween(cjs.Tween.get(this.namingProcedure).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(180));
 
 	// 预防方法
-	this.instance_18 = new lib.预防方法();
-	this.instance_18.setTransform(119.5,574.55,0.584,0.5044,0,0,0,0.1,0);
-	this.instance_18.alpha = 0;
-	this.instance_18._off = true;
-	new cjs.ButtonHelper(this.instance_18, 0, 1, 2, false, new lib.预防方法(), 3);
+	this.instance_16 = new lib.预防方法();
+	this.instance_16.setTransform(119.5,574.55,0.584,0.5044,0,0,0,0.1,0);
+	this.instance_16.alpha = 0;
+	this.instance_16._off = true;
+	new cjs.ButtonHelper(this.instance_16, 0, 1, 2, false, new lib.预防方法(), 3);
 
 	this.preventionMethods = new lib.预防方法();
+	this.preventionMethods.name = "preventionMethods";
 	this.preventionMethods.setTransform(119.5,574.55,0.584,0.5044,0,0,0,0.1,0);
 	this.preventionMethods._off = true;
 	new cjs.ButtonHelper(this.preventionMethods, 0, 1, 2, false, new lib.预防方法(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_18).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(121));
-	this.timeline.addTween(cjs.Tween.get(this.preventionMethods).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(90));
+	this.timeline.addTween(cjs.Tween.get(this.instance_16).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(211));
+	this.timeline.addTween(cjs.Tween.get(this.preventionMethods).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(180));
 
 	// 疫情防控
-	this.instance_19 = new lib.疫情防控();
-	this.instance_19.setTransform(119.45,511,0.584,0.5044);
-	this.instance_19.alpha = 0;
-	this.instance_19._off = true;
-	new cjs.ButtonHelper(this.instance_19, 0, 1, 2, false, new lib.疫情防控(), 3);
+	this.instance_17 = new lib.疫情防控();
+	this.instance_17.setTransform(119.45,511,0.584,0.5044);
+	this.instance_17.alpha = 0;
+	this.instance_17._off = true;
+	new cjs.ButtonHelper(this.instance_17, 0, 1, 2, false, new lib.疫情防控(), 3);
 
 	this.epidemicPreventionAndControl = new lib.疫情防控();
+	this.epidemicPreventionAndControl.name = "epidemicPreventionAndControl";
 	this.epidemicPreventionAndControl.setTransform(119.45,511,0.584,0.5044);
 	this.epidemicPreventionAndControl._off = true;
 	new cjs.ButtonHelper(this.epidemicPreventionAndControl, 0, 1, 2, false, new lib.疫情防控(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_19).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(121));
-	this.timeline.addTween(cjs.Tween.get(this.epidemicPreventionAndControl).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(90));
+	this.timeline.addTween(cjs.Tween.get(this.instance_17).wait(299).to({_off:false},0).to({_off:true,alpha:1},30).wait(211));
+	this.timeline.addTween(cjs.Tween.get(this.epidemicPreventionAndControl).wait(299).to({_off:false},30).wait(2).to({alpha:0},28).to({_off:true},1).wait(180));
 
 	// 诊断标准
-	this.instance_20 = new lib.诊断标准();
-	this.instance_20.setTransform(119.45,383.95,0.584,0.5044,0,0,0,0,0.1);
-	this.instance_20.alpha = 0;
-	this.instance_20._off = true;
-	new cjs.ButtonHelper(this.instance_20, 0, 1, 2, false, new lib.诊断标准(), 3);
+	this.instance_18 = new lib.诊断标准();
+	this.instance_18.setTransform(119.45,383.95,0.584,0.5044,0,0,0,0,0.1);
+	this.instance_18.alpha = 0;
+	this.instance_18._off = true;
+	new cjs.ButtonHelper(this.instance_18, 0, 1, 2, false, new lib.诊断标准(), 3);
 
 	this.diagnosticCriteria = new lib.诊断标准();
+	this.diagnosticCriteria.name = "diagnosticCriteria";
 	this.diagnosticCriteria.setTransform(119.5,383.95,0.584,0.5044,0,0,0,0.1,0.1);
 	this.diagnosticCriteria._off = true;
 	new cjs.ButtonHelper(this.diagnosticCriteria, 0, 1, 2, false, new lib.诊断标准(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_20).wait(299).to({_off:false},0).to({_off:true,regX:0.1,x:119.5,alpha:1},30).wait(121));
-	this.timeline.addTween(cjs.Tween.get(this.diagnosticCriteria).wait(299).to({_off:false},30).to({regX:0,x:119.45},2).to({alpha:0},28).to({_off:true},1).wait(90));
+	this.timeline.addTween(cjs.Tween.get(this.instance_18).wait(299).to({_off:false},0).to({_off:true,regX:0.1,x:119.5,alpha:1},30).wait(211));
+	this.timeline.addTween(cjs.Tween.get(this.diagnosticCriteria).wait(299).to({_off:false},30).to({regX:0,x:119.45},2).to({alpha:0},28).to({_off:true},1).wait(180));
 
 	// 外部框架
-	this.instance_21 = new lib.框架背景("synched",0);
-	this.instance_21.setTransform(477.6,321.3,1,1,0,0,0,463.6,301);
-	this.instance_21.alpha = 0;
-	this.instance_21._off = true;
+	this.instance_19 = new lib.框架背景("synched",0);
+	this.instance_19.setTransform(477.6,321.3,1,1,0,0,0,463.6,301);
+	this.instance_19.alpha = 0;
+	this.instance_19._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_21).wait(299).to({_off:false},0).to({alpha:1},30).to({startPosition:0},2).to({alpha:0},28).to({_off:true},1).wait(90));
+	this.timeline.addTween(cjs.Tween.get(this.instance_19).wait(299).to({_off:false},0).to({alpha:1},30).to({startPosition:0},2).to({alpha:0},28).to({_off:true},1).wait(180));
 
 	// 文本
-	this.instance_22 = new lib.内容文本("synched",0);
-	this.instance_22.setTransform(579.65,333.5,1,1,0,0,0,359.4,280.4);
-	this.instance_22.alpha = 0;
-	this.instance_22._off = true;
+	this.instance_20 = new lib.内容文本("synched",0);
+	this.instance_20.setTransform(579.65,333.5,1,1,0,0,0,359.4,280.4);
+	this.instance_20.alpha = 0;
+	this.instance_20._off = true;
 
 	this.text2 = new cjs.Text("冠状病毒：coronavirus\n新型冠状病毒：novel coronavirus(2019-nCoV)\n传染病：epidemic/infectious disease\n流行病学家：epidemiologist\n爆发：outbreak\n乙类传染病：category-B infectious diseases\n病毒的动物宿主：animal hosts\n确诊病例：confirmed cases\n疑似病例：suspected cases\n人传人：person-to-person transmission\n超级传播者：super-spreader\n密切接触者：close contact\n临床症状：clinical signs and symptoms\n发热、咳嗽、呼吸困难：fever, cough and difficulty in breathing\n发病率：incidence rate\n致死率：fatality /mortality /death rate\n发热门诊：fever clinic\n发热病人：fever patient\n重症患者：patient in critical condition\n潜伏期：incubation period\n飞沫传播：droplet transmission", "20px 'FZCuHeiSongS-B-GB'", "#FF0000");
 	this.text2.name = "text2";
@@ -8217,125 +8478,217 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.text2.parent = this;
 	this.text2.setTransform(222.25,55.1);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_22}]},389).to({state:[{t:this.instance_22}]},30).to({state:[{t:this.text2}]},1).to({state:[]},1).wait(29));
-	this.timeline.addTween(cjs.Tween.get(this.instance_22).wait(389).to({_off:false},0).to({alpha:1},30).to({_off:true,regX:0,regY:0,x:222.25,y:55.1,text:"冠状病毒：coronavirus\n新型冠状病毒：novel coronavirus(2019-nCoV)\n传染病：epidemic/infectious disease\n流行病学家：epidemiologist\n爆发：outbreak\n乙类传染病：category-B infectious diseases\n病毒的动物宿主：animal hosts\n确诊病例：confirmed cases\n疑似病例：suspected cases\n人传人：person-to-person transmission\n超级传播者：super-spreader\n密切接触者：close contact\n临床症状：clinical signs and symptoms\n发热、咳嗽、呼吸困难：fever, cough and difficulty in breathing\n发病率：incidence rate\n致死率：fatality /mortality /death rate\n发热门诊：fever clinic\n发热病人：fever patient\n重症患者：patient in critical condition\n潜伏期：incubation period\n飞沫传播：droplet transmission",font:"20px 'FZCuHeiSongS-B-GB'",color:"#FF0000",textAlign:0,lineHeight:26.35,lineWidth:715},1).wait(30));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_20}]},389).to({state:[{t:this.instance_20}]},30).to({state:[{t:this.text2}]},1).to({state:[]},1).wait(119));
+	this.timeline.addTween(cjs.Tween.get(this.instance_20).wait(389).to({_off:false},0).to({alpha:1},30).to({_off:true,regX:0,regY:0,x:222.25,y:55.1,text:"冠状病毒：coronavirus\n新型冠状病毒：novel coronavirus(2019-nCoV)\n传染病：epidemic/infectious disease\n流行病学家：epidemiologist\n爆发：outbreak\n乙类传染病：category-B infectious diseases\n病毒的动物宿主：animal hosts\n确诊病例：confirmed cases\n疑似病例：suspected cases\n人传人：person-to-person transmission\n超级传播者：super-spreader\n密切接触者：close contact\n临床症状：clinical signs and symptoms\n发热、咳嗽、呼吸困难：fever, cough and difficulty in breathing\n发病率：incidence rate\n致死率：fatality /mortality /death rate\n发热门诊：fever clinic\n发热病人：fever patient\n重症患者：patient in critical condition\n潜伏期：incubation period\n飞沫传播：droplet transmission",font:"20px 'FZCuHeiSongS-B-GB'",color:"#FF0000",textAlign:0,lineHeight:26.35,lineWidth:715},1).wait(120));
 
 	// 病毒
-	this.instance_23 = new lib.病毒();
-	this.instance_23.setTransform(114.75,59.1,0.605,0.605);
-	this.instance_23.alpha = 0;
-	this.instance_23._off = true;
-	new cjs.ButtonHelper(this.instance_23, 0, 1, 2, false, new lib.病毒(), 3);
+	this.instance_21 = new lib.病毒();
+	this.instance_21.setTransform(114.75,59.1,0.605,0.605);
+	this.instance_21.alpha = 0;
+	this.instance_21._off = true;
+	new cjs.ButtonHelper(this.instance_21, 0, 1, 2, false, new lib.病毒(), 3);
 
 	this.virusesAndDiseases = new lib.病毒();
+	this.virusesAndDiseases.name = "virusesAndDiseases";
 	this.virusesAndDiseases.setTransform(116,146.1,0.605,0.605);
 	this.virusesAndDiseases._off = true;
 	new cjs.ButtonHelper(this.virusesAndDiseases, 0, 1, 2, false, new lib.病毒(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_23).wait(389).to({_off:false},0).to({_off:true,x:116,y:146.1,alpha:1},30).wait(31));
-	this.timeline.addTween(cjs.Tween.get(this.virusesAndDiseases).wait(389).to({_off:false},30).wait(2).to({x:114.75,y:59.1,alpha:0},28).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_21).wait(389).to({_off:false},0).to({_off:true,x:116,y:146.1,alpha:1},30).wait(121));
+	this.timeline.addTween(cjs.Tween.get(this.virusesAndDiseases).wait(389).to({_off:false},30).wait(2).to({x:114.75,y:59.1,alpha:0},28).to({_off:true},1).wait(90));
 
 	// 相关组织与机构
-	this.instance_24 = new lib.相关组织与机构();
-	this.instance_24.setTransform(114.75,575.15,0.6049,0.6052,0,0,0,0,0.1);
-	this.instance_24.alpha = 0;
-	this.instance_24._off = true;
-	new cjs.ButtonHelper(this.instance_24, 0, 1, 2, false, new lib.相关组织与机构(), 3);
+	this.instance_22 = new lib.相关组织与机构();
+	this.instance_22.setTransform(114.75,575.15,0.6049,0.6052,0,0,0,0,0.1);
+	this.instance_22.alpha = 0;
+	this.instance_22._off = true;
+	new cjs.ButtonHelper(this.instance_22, 0, 1, 2, false, new lib.相关组织与机构(), 3);
 
 	this.relevantOrganizationsAndInstitutions = new lib.相关组织与机构();
+	this.relevantOrganizationsAndInstitutions.name = "relevantOrganizationsAndInstitutions";
 	this.relevantOrganizationsAndInstitutions.setTransform(114.75,451.15,0.6049,0.6052,0,0,0,0,0.1);
 	this.relevantOrganizationsAndInstitutions._off = true;
 	new cjs.ButtonHelper(this.relevantOrganizationsAndInstitutions, 0, 1, 2, false, new lib.相关组织与机构(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_24).wait(389).to({_off:false},0).to({_off:true,y:451.15,alpha:1},30).wait(31));
-	this.timeline.addTween(cjs.Tween.get(this.relevantOrganizationsAndInstitutions).wait(389).to({_off:false},30).wait(2).to({x:116,y:575.15,alpha:0},28).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_22).wait(389).to({_off:false},0).to({_off:true,y:451.15,alpha:1},30).wait(121));
+	this.timeline.addTween(cjs.Tween.get(this.relevantOrganizationsAndInstitutions).wait(389).to({_off:false},30).wait(2).to({x:116,y:575.15,alpha:0},28).to({_off:true},1).wait(90));
 
 	// 影响与对策
-	this.instance_25 = new lib.影响与对策();
-	this.instance_25.setTransform(114.8,447.65,0.6049,0.6052,0,0,0,0.1,0);
-	this.instance_25.alpha = 0;
-	this.instance_25._off = true;
-	new cjs.ButtonHelper(this.instance_25, 0, 1, 2, false, new lib.影响与对策(), 3);
+	this.instance_23 = new lib.影响与对策();
+	this.instance_23.setTransform(114.8,447.65,0.6049,0.6052,0,0,0,0.1,0);
+	this.instance_23.alpha = 0;
+	this.instance_23._off = true;
+	new cjs.ButtonHelper(this.instance_23, 0, 1, 2, false, new lib.影响与对策(), 3);
 
 	this.influenceAndCountermeasures = new lib.影响与对策();
+	this.influenceAndCountermeasures.name = "influenceAndCountermeasures";
 	this.influenceAndCountermeasures.setTransform(114.8,374.85,0.6049,0.6052,0,0,0,0.1,0);
 	this.influenceAndCountermeasures._off = true;
 	new cjs.ButtonHelper(this.influenceAndCountermeasures, 0, 1, 2, false, new lib.影响与对策(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_25).wait(389).to({_off:false},0).to({_off:true,y:374.85,alpha:1},30).wait(31));
-	this.timeline.addTween(cjs.Tween.get(this.influenceAndCountermeasures).wait(389).to({_off:false},30).wait(2).to({y:447.65,alpha:0},28).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_23).wait(389).to({_off:false},0).to({_off:true,y:374.85,alpha:1},30).wait(121));
+	this.timeline.addTween(cjs.Tween.get(this.influenceAndCountermeasures).wait(389).to({_off:false},30).wait(2).to({y:447.65,alpha:0},28).to({_off:true},1).wait(90));
 
 	// 防护
-	this.instance_26 = new lib.防护();
-	this.instance_26.setTransform(114.75,309.4,0.6049,0.6052);
-	this.instance_26.alpha = 0;
-	this.instance_26._off = true;
-	new cjs.ButtonHelper(this.instance_26, 0, 1, 2, false, new lib.防护(), 3);
+	this.instance_24 = new lib.防护();
+	this.instance_24.setTransform(114.75,309.4,0.6049,0.6052);
+	this.instance_24.alpha = 0;
+	this.instance_24._off = true;
+	new cjs.ButtonHelper(this.instance_24, 0, 1, 2, false, new lib.防护(), 3);
 
 	this.protect = new lib.防护();
+	this.protect.name = "protect";
 	this.protect.setTransform(114.75,298.6,0.6049,0.6052);
 	this.protect._off = true;
 	new cjs.ButtonHelper(this.protect, 0, 1, 2, false, new lib.防护(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_26).wait(389).to({_off:false},0).to({_off:true,y:298.6,alpha:1},30).wait(31));
-	this.timeline.addTween(cjs.Tween.get(this.protect).wait(389).to({_off:false},30).wait(2).to({y:309.4,alpha:0},28).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_24).wait(389).to({_off:false},0).to({_off:true,y:298.6,alpha:1},30).wait(121));
+	this.timeline.addTween(cjs.Tween.get(this.protect).wait(389).to({_off:false},30).wait(2).to({y:309.4,alpha:0},28).to({_off:true},1).wait(90));
 
 	// 医疗
-	this.instance_27 = new lib.医疗();
-	this.instance_27.setTransform(114.8,180,0.6049,0.6052,0,0,0,0.1,0);
-	this.instance_27.alpha = 0;
-	this.instance_27._off = true;
-	new cjs.ButtonHelper(this.instance_27, 0, 1, 2, false, new lib.医疗(), 3);
+	this.instance_25 = new lib.医疗();
+	this.instance_25.setTransform(114.8,180,0.6049,0.6052,0,0,0,0.1,0);
+	this.instance_25.alpha = 0;
+	this.instance_25._off = true;
+	new cjs.ButtonHelper(this.instance_25, 0, 1, 2, false, new lib.医疗(), 3);
 
 	this.medicalCare = new lib.医疗();
+	this.medicalCare.name = "medicalCare";
 	this.medicalCare.setTransform(114.8,222.35,0.6049,0.6052,0,0,0,0.1,0);
 	this.medicalCare._off = true;
 	new cjs.ButtonHelper(this.medicalCare, 0, 1, 2, false, new lib.医疗(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_27).wait(389).to({_off:false},0).to({_off:true,y:222.35,alpha:1},30).wait(31));
-	this.timeline.addTween(cjs.Tween.get(this.medicalCare).wait(389).to({_off:false},30).wait(2).to({y:180,alpha:0},28).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_25).wait(389).to({_off:false},0).to({_off:true,y:222.35,alpha:1},30).wait(121));
+	this.timeline.addTween(cjs.Tween.get(this.medicalCare).wait(389).to({_off:false},30).wait(2).to({y:180,alpha:0},28).to({_off:true},1).wait(90));
 
 	// 返回按钮
-	this.instance_28 = new lib.返回按钮();
-	this.instance_28.setTransform(861.05,27.6);
-	this.instance_28.alpha = 0;
-	this.instance_28._off = true;
-	new cjs.ButtonHelper(this.instance_28, 0, 1, 2, false, new lib.返回按钮(), 3);
+	this.instance_26 = new lib.返回按钮();
+	this.instance_26.setTransform(861.05,27.6);
+	this.instance_26.alpha = 0;
+	this.instance_26._off = true;
+	new cjs.ButtonHelper(this.instance_26, 0, 1, 2, false, new lib.返回按钮(), 3);
 
 	this.back4 = new lib.返回按钮();
+	this.back4.name = "back4";
 	this.back4.setTransform(862.05,27.6);
 	this.back4._off = true;
 	new cjs.ButtonHelper(this.back4, 0, 1, 2, false, new lib.返回按钮(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_28).wait(389).to({_off:false},0).to({_off:true,x:862.05,alpha:1},30).wait(31));
-	this.timeline.addTween(cjs.Tween.get(this.back4).wait(389).to({_off:false},30).to({x:861.05},2).to({alpha:0},28).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_26).wait(389).to({_off:false},0).to({_off:true,x:862.05,alpha:1},30).wait(121));
+	this.timeline.addTween(cjs.Tween.get(this.back4).wait(389).to({_off:false},30).to({x:861.05},2).to({alpha:0},28).to({_off:true},1).wait(90));
 
 	// 外部框架
-	this.instance_29 = new lib.框架背景("synched",0);
-	this.instance_29.setTransform(481.05,322.6,1,1,0,0,0,463.6,301);
+	this.instance_27 = new lib.框架背景("synched",0);
+	this.instance_27.setTransform(481.05,322.6,1,1,0,0,0,463.6,301);
+	this.instance_27.alpha = 0;
+	this.instance_27._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_27).wait(389).to({_off:false},0).to({alpha:1},30).to({startPosition:0},2).to({alpha:0},28).to({_off:true},1).wait(90));
+
+	// 返回
+	this.back5 = new lib.返回按钮();
+	this.back5.name = "back5";
+	this.back5.setTransform(843.4,24.3);
+	this.back5.alpha = 0;
+	this.back5._off = true;
+	new cjs.ButtonHelper(this.back5, 0, 1, 2, false, new lib.返回按钮(), 3);
+
+	this.timeline.addTween(cjs.Tween.get(this.back5).wait(479).to({_off:false},0).to({alpha:1},30).to({alpha:0},30).wait(1));
+
+	// 题目
+	this.instance_28 = new lib.题目("synched",0);
+	this.instance_28.setTransform(486.4,112.5,1,1,0,0,0,446.8,88.2);
+	this.instance_28.alpha = 0;
+	this.instance_28._off = true;
+
+	this.title = new lib.题目();
+	this.title.name = "title";
+	this.title.setTransform(486.4,112.5,1,1,0,0,0,446.8,88.2);
+	this.title._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_28).wait(479).to({_off:false},0).to({_off:true,alpha:1,mode:"independent"},30).to({_off:false,alpha:0,mode:"synched",startPosition:0},30).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.title).wait(479).to({_off:false},30).to({_off:true,alpha:0,mode:"synched",startPosition:0},30).wait(1));
+
+	// 选项A
+	this.instance_29 = new lib.选项A();
+	this.instance_29.setTransform(493.35,311.35);
 	this.instance_29.alpha = 0;
 	this.instance_29._off = true;
+	new cjs.ButtonHelper(this.instance_29, 0, 1, 2, false, new lib.选项A(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_29).wait(389).to({_off:false},0).to({alpha:1},30).to({startPosition:0},2).to({alpha:0},28).wait(1));
+	this.A = new lib.选项A();
+	this.A.name = "A";
+	this.A.setTransform(493.35,311.35);
+	this.A._off = true;
+	new cjs.ButtonHelper(this.A, 0, 1, 2, false, new lib.选项A(), 3);
 
-	// 背景
-	this.instance_30 = new lib.背景_改("synched",0);
-	this.instance_30.setTransform(665.5,320.8,1,1,0,0,0,590.5,318.8);
+	this.timeline.addTween(cjs.Tween.get(this.instance_29).wait(479).to({_off:false},0).to({_off:true,alpha:1},30).wait(31));
+	this.timeline.addTween(cjs.Tween.get(this.A).wait(479).to({_off:false},30).to({alpha:0},30).wait(1));
+
+	// 选项B
+	this.instance_30 = new lib.选项B();
+	this.instance_30.setTransform(496.25,417.9);
 	this.instance_30.alpha = 0;
+	this.instance_30._off = true;
+	new cjs.ButtonHelper(this.instance_30, 0, 1, 2, false, new lib.选项B(), 3);
 
-	this.instance_31 = new lib.背景2("synched",0);
-	this.instance_31.setTransform(72.8,325.4,1,1,0,0,0,886.8,325.4);
+	this.B = new lib.选项B();
+	this.B.name = "B";
+	this.B.setTransform(496.25,417.9);
+	this.B._off = true;
+	new cjs.ButtonHelper(this.B, 0, 1, 2, false, new lib.选项B(), 3);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_30).wait(479).to({_off:false},0).to({_off:true,alpha:1},30).wait(31));
+	this.timeline.addTween(cjs.Tween.get(this.B).wait(479).to({_off:false},30).to({alpha:0},30).wait(1));
+
+	// 选项C
+	this.instance_31 = new lib.选项C();
+	this.instance_31.setTransform(496.25,528.85);
 	this.instance_31.alpha = 0;
 	this.instance_31._off = true;
+	new cjs.ButtonHelper(this.instance_31, 0, 1, 2, false, new lib.选项C(), 3);
 
-	this.instance_32 = new lib.背景3_1("synched",0);
-	this.instance_32.setTransform(600,393.5,1,1,0,0,0,600,393.5);
+	this.C = new lib.选项C();
+	this.C.name = "C";
+	this.C.setTransform(496.25,528.85);
+	this.C._off = true;
+	new cjs.ButtonHelper(this.C, 0, 1, 2, false, new lib.选项C(), 3);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_31).wait(479).to({_off:false},0).to({_off:true,alpha:1},30).wait(31));
+	this.timeline.addTween(cjs.Tween.get(this.C).wait(479).to({_off:false},30).to({alpha:0},30).wait(1));
+
+	// 框架背景
+	this.instance_32 = new lib.框架背景("synched",0);
+	this.instance_32.setTransform(483.95,316.4,1,1.0041,0,0,0,463.6,301.1);
 	this.instance_32.alpha = 0;
 	this.instance_32._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_30).to({alpha:0.9883},58,cjs.Ease.circOut).to({alpha:1},1).to({x:369.25,alpha:0.3086},60,cjs.Ease.quartIn).to({startPosition:0},30,cjs.Ease.quartInOut).to({x:665.5,alpha:0},30,cjs.Ease.cubicOut).to({x:369.25,alpha:0.3086},1,cjs.Ease.circOut).to({alpha:1},28,cjs.Ease.circIn).to({startPosition:0},1).to({x:665.5,alpha:0},30,cjs.Ease.quartOut).to({_off:true,regX:886.8,regY:325.4,x:72.8,y:325.4},1).wait(90).to({_off:false,regX:590.5,regY:318.8,x:665.5,y:320.8},29,cjs.Ease.circInOut).to({_off:true,regX:600,regY:393.5,x:600,y:393.5},1).wait(90));
-	this.timeline.addTween(cjs.Tween.get(this.instance_31).wait(239).to({_off:false},1).to({x:886.8,alpha:1},89,cjs.Ease.sineInOut).to({startPosition:0},1).to({_off:true,regX:590.5,regY:318.8,x:665.5,y:320.8,alpha:0},29,cjs.Ease.circInOut).wait(91));
-	this.timeline.addTween(cjs.Tween.get(this.instance_32).wait(359).to({_off:false},1).to({x:360,y:246.5,alpha:1},59,cjs.Ease.quadOut).to({startPosition:0},1).wait(1).to({x:368.35,y:251.6,alpha:0.9654},0).wait(1).to({x:376.65,y:256.7,alpha:0.9308},0).wait(1).to({x:384.9,y:261.8,alpha:0.8963},0).wait(1).to({x:393.2,y:266.85,alpha:0.8617},0).wait(1).to({x:401.5,y:271.95,alpha:0.8271},0).wait(1).to({x:409.8,y:277,alpha:0.7926},0).wait(1).to({x:418.1,y:282.1,alpha:0.758},0).wait(1).to({x:426.4,y:287.15,alpha:0.7235},0).wait(1).to({x:434.65,y:292.25,alpha:0.689},0).wait(1).to({x:442.95,y:297.3,alpha:0.6544},0).wait(1).to({x:451.25,y:302.4,alpha:0.6199},0).wait(1).to({x:459.5,y:307.45,alpha:0.5854},0).wait(1).to({x:467.8,y:312.55,alpha:0.5509},0).wait(1).to({x:476.1,y:317.6,alpha:0.5164},0).wait(1).to({x:484.35,y:322.7,alpha:0.482},0).wait(1).to({x:492.65,y:327.75,alpha:0.4475},0).wait(1).to({x:500.9,y:332.8,alpha:0.413},0).wait(1).to({x:509.15,y:337.9,alpha:0.3786},0).wait(1).to({x:517.45,y:342.95,alpha:0.3441},0).wait(1).to({x:525.7,y:348,alpha:0.3097},0).wait(1).to({x:533.95,y:353.05,alpha:0.2752},0).wait(1).to({x:542.25,y:358.15,alpha:0.2408},0).wait(1).to({x:550.5,y:363.2,alpha:0.2064},0).wait(1).to({x:558.75,y:368.25,alpha:0.172},0).wait(1).to({x:567,y:373.3,alpha:0.1376},0).wait(1).to({x:575.25,y:378.35,alpha:0.1032},0).wait(1).to({x:583.5,y:383.4,alpha:0.0688},0).wait(1).to({x:591.75,y:388.45,alpha:0.0344},0).wait(1).to({x:600,y:393.5,alpha:0},0).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_32).wait(479).to({_off:false},0).to({alpha:1},30).to({alpha:0},30).wait(1));
+
+	// 背景
+	this.instance_33 = new lib.背景_改("synched",0);
+	this.instance_33.setTransform(665.5,320.8,1,1,0,0,0,590.5,318.8);
+	this.instance_33.alpha = 0;
+
+	this.instance_34 = new lib.背景2("synched",0);
+	this.instance_34.setTransform(72.8,325.4,1,1,0,0,0,886.8,325.4);
+	this.instance_34.alpha = 0;
+	this.instance_34._off = true;
+
+	this.instance_35 = new lib.背景3_1("synched",0);
+	this.instance_35.setTransform(600,393.5,1,1,0,0,0,600,393.5);
+	this.instance_35.alpha = 0;
+	this.instance_35._off = true;
+
+	this.instance_36 = new lib.背景4_1("synched",0);
+	this.instance_36.setTransform(260,283,1,1,0,0,0,700,357);
+	this.instance_36.alpha = 0;
+	this.instance_36._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_33).to({alpha:0.9883},58,cjs.Ease.none).to({alpha:1},1).to({x:369.25,alpha:0.3086},60,cjs.Ease.quartIn).to({startPosition:0},30,cjs.Ease.quartInOut).to({x:665.5,alpha:0},30,cjs.Ease.cubicOut).to({x:369.25,alpha:0.3086},1,cjs.Ease.circOut).to({alpha:1},28,cjs.Ease.circIn).to({startPosition:0},1).to({x:665.5,alpha:0},30,cjs.Ease.quartOut).to({_off:true,regX:886.8,regY:325.4,x:72.8,y:325.4},1).wait(90).to({_off:false,regX:590.5,regY:318.8,x:665.5,y:320.8},29,cjs.Ease.circInOut).to({_off:true,regX:600,regY:393.5,x:600,y:393.5},1).wait(180));
+	this.timeline.addTween(cjs.Tween.get(this.instance_34).wait(239).to({_off:false},1).to({x:886.8,alpha:1},89,cjs.Ease.sineInOut).to({startPosition:0},1).to({_off:true,regX:590.5,regY:318.8,x:665.5,y:320.8,alpha:0},29,cjs.Ease.circInOut).wait(181));
+	this.timeline.addTween(cjs.Tween.get(this.instance_35).wait(359).to({_off:false},1).to({x:360,y:246.5,alpha:1},59,cjs.Ease.quadOut).to({startPosition:0},1).wait(1).to({x:368.35,y:251.6,alpha:0.9654},0).wait(1).to({x:376.65,y:256.7,alpha:0.9308},0).wait(1).to({x:384.9,y:261.8,alpha:0.8963},0).wait(1).to({x:393.2,y:266.85,alpha:0.8617},0).wait(1).to({x:401.5,y:271.95,alpha:0.8271},0).wait(1).to({x:409.8,y:277,alpha:0.7926},0).wait(1).to({x:418.1,y:282.1,alpha:0.758},0).wait(1).to({x:426.4,y:287.15,alpha:0.7235},0).wait(1).to({x:434.65,y:292.25,alpha:0.689},0).wait(1).to({x:442.95,y:297.3,alpha:0.6544},0).wait(1).to({x:451.25,y:302.4,alpha:0.6199},0).wait(1).to({x:459.5,y:307.45,alpha:0.5854},0).wait(1).to({x:467.8,y:312.55,alpha:0.5509},0).wait(1).to({x:476.1,y:317.6,alpha:0.5164},0).wait(1).to({x:484.35,y:322.7,alpha:0.482},0).wait(1).to({x:492.65,y:327.75,alpha:0.4475},0).wait(1).to({x:500.9,y:332.8,alpha:0.413},0).wait(1).to({x:509.15,y:337.9,alpha:0.3786},0).wait(1).to({x:517.45,y:342.95,alpha:0.3441},0).wait(1).to({x:525.7,y:348,alpha:0.3097},0).wait(1).to({x:533.95,y:353.05,alpha:0.2752},0).wait(1).to({x:542.25,y:358.15,alpha:0.2408},0).wait(1).to({x:550.5,y:363.2,alpha:0.2064},0).wait(1).to({x:558.75,y:368.25,alpha:0.172},0).wait(1).to({x:567,y:373.3,alpha:0.1376},0).wait(1).to({x:575.25,y:378.35,alpha:0.1032},0).wait(1).to({x:583.5,y:383.4,alpha:0.0688},0).wait(1).to({x:591.75,y:388.45,alpha:0.0344},0).wait(1).to({x:600,y:393.5,alpha:0},0).to({_off:true,regX:700,regY:357,x:260,y:283},1).wait(90));
+	this.timeline.addTween(cjs.Tween.get(this.instance_36).wait(449).to({_off:false},1).wait(1).to({x:274.65,y:285.5,alpha:0.0333},0).wait(1).to({x:288.95,y:287.9,alpha:0.0658},0).wait(1).to({x:302.95,y:290.25,alpha:0.0976},0).wait(1).to({x:316.65,y:292.55,alpha:0.1287},0).wait(1).to({x:330,y:294.8,alpha:0.1591},0).wait(1).to({x:343.1,y:297,alpha:0.1888},0).wait(1).to({x:355.85,y:299.15,alpha:0.2178},0).wait(1).to({x:368.3,y:301.25,alpha:0.2461},0).wait(1).to({x:380.5,y:303.3,alpha:0.2738},0).wait(1).to({x:392.4,y:305.3,alpha:0.3009},0).wait(1).to({x:404,y:307.25,alpha:0.3272},0).wait(1).to({x:415.35,y:309.15,alpha:0.353},0).wait(1).to({x:426.4,y:311,alpha:0.3781},0).wait(1).to({x:437.2,y:312.8,alpha:0.4026},0).wait(1).to({x:447.7,y:314.6,alpha:0.4266},0).wait(1).to({x:457.95,y:316.3,alpha:0.4499},0).wait(1).to({x:467.95,y:318,alpha:0.4726},0).wait(1).to({x:477.7,y:319.65,alpha:0.4948},0).wait(1).to({x:487.2,y:321.25,alpha:0.5163},0).wait(1).to({x:496.45,y:322.8,alpha:0.5374},0).wait(1).to({x:505.5,y:324.3,alpha:0.5578},0).wait(1).to({x:514.25,y:325.8,alpha:0.5778},0).wait(1).to({x:522.8,y:327.2,alpha:0.5972},0).wait(1).to({x:531.1,y:328.6,alpha:0.616},0).wait(1).to({x:539.15,y:329.95,alpha:0.6344},0).wait(1).to({x:547,y:331.3,alpha:0.6522},0).wait(1).to({x:554.65,y:332.55,alpha:0.6696},0).wait(1).to({x:562.05,y:333.8,alpha:0.6864},0).wait(1).to({x:569.25,y:335.05,alpha:0.7028},0).wait(1).to({x:576.25,y:336.2,alpha:0.7186},0).wait(1).to({x:583,y:337.35,alpha:0.7341},0).wait(1).to({x:589.6,y:338.45,alpha:0.749},0).wait(1).to({x:595.95,y:339.5,alpha:0.7635},0).wait(1).to({x:602.15,y:340.55,alpha:0.7775},0).wait(1).to({x:608.1,y:341.55,alpha:0.7911},0).wait(1).to({x:613.9,y:342.55,alpha:0.8043},0).wait(1).to({x:619.5,y:343.5,alpha:0.817},0).wait(1).to({x:624.9,y:344.4,alpha:0.8293},0).wait(1).to({x:630.15,y:345.25,alpha:0.8412},0).wait(1).to({x:635.2,y:346.1,alpha:0.8526},0).wait(1).to({x:640.05,y:346.95,alpha:0.8637},0).wait(1).to({x:644.75,y:347.75,alpha:0.8744},0).wait(1).to({x:649.25,y:348.5,alpha:0.8846},0).wait(1).to({x:653.6,y:349.2,alpha:0.8945},0).wait(1).to({x:657.8,y:349.9,alpha:0.904},0).wait(1).to({x:661.8,y:350.6,alpha:0.9132},0).wait(1).to({x:665.65,y:351.25,alpha:0.9219},0).wait(1).to({x:669.35,y:351.85,alpha:0.9303},0).wait(1).to({x:672.9,y:352.45,alpha:0.9383},0).wait(1).to({x:676.25,y:353.05,alpha:0.946},0).wait(1).to({x:679.5,y:353.55,alpha:0.9533},0).wait(1).to({x:682.55,y:354.1,alpha:0.9603},0).wait(1).to({x:685.5,y:354.6,alpha:0.967},0).wait(1).to({x:688.25,y:355.05,alpha:0.9733},0).wait(1).to({x:690.9,y:355.5,alpha:0.9793},0).wait(1).to({x:693.4,y:355.9,alpha:0.9849},0).wait(1).to({x:695.75,y:356.3,alpha:0.9903},0).wait(1).to({x:697.95,y:356.7,alpha:0.9953},0).wait(1).to({x:700,y:357,alpha:1},0).wait(1).to({x:684.85,y:354.5,alpha:0.9655},0).wait(1).to({x:669.75,y:351.95,alpha:0.9312},0).wait(1).to({x:654.65,y:349.4,alpha:0.8969},0).wait(1).to({x:639.6,y:346.85,alpha:0.8627},0).wait(1).to({x:624.55,y:344.35,alpha:0.8285},0).wait(1).to({x:609.6,y:341.8,alpha:0.7944},0).wait(1).to({x:594.6,y:339.3,alpha:0.7605},0).wait(1).to({x:579.7,y:336.8,alpha:0.7265},0).wait(1).to({x:564.8,y:334.3,alpha:0.6927},0).wait(1).to({x:549.95,y:331.8,alpha:0.659},0).wait(1).to({x:535.15,y:329.3,alpha:0.6253},0).wait(1).to({x:520.35,y:326.8,alpha:0.5917},0).wait(1).to({x:505.6,y:324.35,alpha:0.5581},0).wait(1).to({x:490.9,y:321.85,alpha:0.5247},0).wait(1).to({x:476.2,y:319.4,alpha:0.4913},0).wait(1).to({x:461.55,y:316.9,alpha:0.458},0).wait(1).to({x:446.95,y:314.45,alpha:0.4248},0).wait(1).to({x:432.35,y:312,alpha:0.3917},0).wait(1).to({x:417.8,y:309.55,alpha:0.3586},0).wait(1).to({x:403.3,y:307.1,alpha:0.3256},0).wait(1).to({x:388.8,y:304.7,alpha:0.2927},0).wait(1).to({x:374.4,y:302.25,alpha:0.2599},0).wait(1).to({x:359.95,y:299.85,alpha:0.2271},0).wait(1).to({x:345.6,y:297.4,alpha:0.1945},0).wait(1).to({x:331.25,y:295,alpha:0.1619},0).wait(1).to({x:316.95,y:292.6,alpha:0.1293},0).wait(1).to({x:302.65,y:290.2,alpha:0.0969},0).wait(1).to({x:288.4,y:287.8,alpha:0.0645},0).wait(1).to({x:274.2,y:285.4,alpha:0.0322},0).wait(1).to({x:260,y:283,alpha:0},0).wait(1));
 
 	// 背景_补色
 	this.shape = new cjs.Shape();
@@ -8346,7 +8699,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.shape_1.graphics.f("#FCF8F7").s().p("EhZ9A+wMAAAh9fMCz7AAAMAAAB9fg");
 	this.shape_1.setTransform(472.575,306);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(450));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(540));
 
 	this._renderFirstFrame();
 
