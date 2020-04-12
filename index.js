@@ -7820,6 +7820,8 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 		this.begin.addEventListener("click", Begin);
 		this.about.addEventListener("click", About);
 		
+		changeBGM("sounds/高梨康治_刃yaiba悲壮.mp3");
+
 		function Begin() {
 			// 开始
 			isAbout = false;
@@ -8066,12 +8068,12 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 			// 相关组织与机构
 			that.text2.text = "世界卫生组织：World Health Organization (WHO)\r\n世界卫生组织驻华代表处：WHO China Country Office\r\n湖北省卫生健康委员会：Health Commission of Hubei Province\r\n武汉市卫生健康委员会：Wuhan Municipal Health Commission\r\n中国红十字会：Red Cross Society of China\r\n中国红十字基金会：Chinese Red Cross Foundation (CRCF)\r\n湖北省红十字会：Red Cross Society of China Hubei Branch\r\n武汉市红十字会：Red Cross Society of China Wuhan Branch\r\n武汉华南海鲜批发市场：Wuhan Huanan Seafood Wholesale Market\r\n武汉市金银潭医院：Wuhan Jinyintan Hospital\r\n小汤山医院：Xiaotangshan Hospital\r\n火神山医院：Huoshenshan (Fire God Mountain) Hospital\r\n雷神山医院：Leishenshan (Thunder God Mountain) Hospital";
 		}
-	}
+	};
 	this.frame_449 = function() {
 		// 返回首页
 		isNext = true;
 		this.gotoAndPlay(transformFrameNumber(1));
-	}
+	};
 	this.frame_509 = function() {
 		// 绑定当前对象
 		var that = this;
@@ -8138,12 +8140,12 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 			that.B.text.text = "B." + questionBank[id].getB();
 			that.C.text.text = "C." + questionBank[id].getC();
 		}
-	}
+	};
 	this.frame_539 = function() {
 		// 返回首页
 		isNext = true;
 		this.gotoAndPlay(transformFrameNumber(1));
-	}
+	};
 
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(58).call(this.frame_58).wait(61).call(this.frame_119).wait(30).call(this.frame_149).wait(30).call(this.frame_179).wait(29).call(this.frame_208).wait(31).call(this.frame_239).wait(91).call(this.frame_330).wait(29).call(this.frame_359).wait(61).call(this.frame_420).wait(29).call(this.frame_449).wait(60).call(this.frame_509).wait(30).call(this.frame_539).wait(1));
