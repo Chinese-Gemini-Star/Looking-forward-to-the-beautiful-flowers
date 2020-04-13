@@ -11758,6 +11758,7 @@
 			function backHome() {
 				// 返回
 				changeBGM("sounds/高梨康治_刃yaiba悲壮.mp3");
+				id = 0;
 				that.play();
 			}
 
