@@ -11631,6 +11631,7 @@
 
 			function backHome() {
 				// 返回
+				Summary();
 				that.play();
 			}
 
@@ -11701,6 +11702,7 @@
 
 			function backHome() {
 				// 返回
+				VirusesAndDiseases();
 				that.play();
 			}
 
