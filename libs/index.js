@@ -11741,6 +11741,9 @@
 			// 停止播放
 			this.stop();
 
+			// 当前题号
+			var id = 0;
+
 			// 添加按钮监听
 			this.back5.addEventListener("click", backHome);
 			flush();
@@ -11751,8 +11754,6 @@
 			this.C.removeEventListener("click", ClickC);
 			this.C.addEventListener("click", ClickC);
 
-			// 当前题号
-			var id = 0;
 			// 做对题数
 			var right = 0;
 			// 做错题数
