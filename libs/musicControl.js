@@ -29,7 +29,12 @@ var times = 0;
      * @return {int}           0
      */
     changeBGM = function(bgmSrc) {
-        music.src = bgmSrc;
+        if (music.paused) {
+            music.src = bgmSrc;
+            music.pause();
+        } else {
+            music.src = bgmSrc;
+        }
         return 0;
     };
 })();

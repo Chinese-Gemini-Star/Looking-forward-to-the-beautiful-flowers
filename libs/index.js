@@ -11579,6 +11579,7 @@
 			function AnswerVirusQuestion() {
 				// 病毒知识竞答
 				whatToDo = "VirusKnowledgeCompetition";
+				changeBGM("sounds/高梨康治たかなしやすはる_刃yaibaヤイバ千軍万馬.mp3");
 				that.play();
 			}
 		}
@@ -11749,8 +11750,6 @@
 			// 做错题数
 			var wrong = 0;
 			// console.log(questionBank[0].getTitle());
-
-			changeBGM("sounds/高梨康治たかなしやすはる_刃yaibaヤイバ千軍万馬.mp3");
 
 			function backHome() {
 				// 返回
