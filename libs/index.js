@@ -11469,11 +11469,6 @@
 			this.begin.addEventListener("click", Begin);
 			this.about.addEventListener("click", About);
 
-			// 自动播放
-			if (times == 0) {
-				changeBGM("sounds/高梨康治_刃yaiba悲壮.mp3");
-			}
-
 			function Begin() {
 				// 开始
 				isAbout = false;
@@ -11507,10 +11502,10 @@
 				// 开始
 				isAbout = false;
 				isNext = false;
-//				if (times == 0) {
-//					music.play();
-//					music_btn.src = "images/play.png";
-//				}
+				if (times == 0) {
+					music.play();
+					music_btn.src = "images/play.png";
+				}
 				that.play();
 			}
 
@@ -11518,10 +11513,10 @@
 				// 关于
 				isAbout = true;
 				isNext = false;
-//				if (times == 0) {
-//					music.play();
-//					music_btn.src = "images/play.png";
-//				}
+				if (times == 0) {
+					music.play();
+					music_btn.src = "images/play.png";
+				}
 				that.play();
 			}
 		}

@@ -1,10 +1,13 @@
 var playPause;
 var changeBGM;
+// 控制按钮
+var music_btn = document.getElementById("music_btn");
+// 控制按钮点按次数
+var times = 0;
 
 (function() {
+    // 背景音乐
     var music = document.getElementById("music");
-    var music_btn = document.getElementById("music_btn");
-    var times = 0;
 
     /**
      * 控制bgm的播放与暂停
