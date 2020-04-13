@@ -11504,7 +11504,6 @@
 				// 开始
 				isAbout = false;
 				isNext = false;
-				changeBGM("sounds/高梨康治_刃yaiba悲壮.mp3");
 				if(times == 0){
 					music.play();
         			music_btn.src = "images/play.png";
@@ -11516,7 +11515,6 @@
 				// 关于
 				isAbout = true;
 				isNext = false;
-				changeBGM("sounds/高梨康治_刃yaiba悲壮.mp3");
 				if(times == 0){
 					music.play();
         			music_btn.src = "images/play.png";
