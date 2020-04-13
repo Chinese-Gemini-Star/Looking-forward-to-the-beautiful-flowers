@@ -11741,29 +11741,29 @@
 			// 停止播放
 			this.stop();
 
-			// 当前题号
-			var id = -1;
-
 			// 添加按钮监听
 			this.back5.addEventListener("click", backHome);
-			flush();
-			this.A.removeEventListener("click", ClickA);
+
 			this.A.addEventListener("click", ClickA);
-			this.B.removeEventListener("click", ClickB);
 			this.B.addEventListener("click", ClickB);
-			this.C.removeEventListener("click", ClickC);
 			this.C.addEventListener("click", ClickC);
 
 			// 做对题数
 			var right = 0;
 			// 做错题数
 			var wrong = 0;
+			// 当前题号
+			var id = 0;
 			// console.log(questionBank[0].getTitle());
 
 			function backHome() {
 				// 返回
 				changeBGM("sounds/高梨康治_刃yaiba悲壮.mp3");
-				id = 0;
+				id = -1;
+				flush();
+				that.A.removeEventListener("click", ClickA);
+				that.B.removeEventListener("click", ClickB);
+				that.C.removeEventListener("click", ClickC);
 				that.play();
 			}
 
