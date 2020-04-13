@@ -11742,7 +11742,7 @@
 			this.stop();
 
 			// 当前题号
-			var id = 0;
+			var id = -1;
 
 			// 添加按钮监听
 			this.back5.addEventListener("click", backHome);
