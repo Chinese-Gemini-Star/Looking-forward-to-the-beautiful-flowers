@@ -11743,8 +11743,12 @@
 
 			// 添加按钮监听
 			this.back5.addEventListener("click", backHome);
+			flush();
+			this.A.removeEventListener("click", ClickA);
 			this.A.addEventListener("click", ClickA);
+			this.B.removeEventListener("click", ClickB);
 			this.B.addEventListener("click", ClickB);
+			this.C.removeEventListener("click", ClickC);
 			this.C.addEventListener("click", ClickC);
 
 			// 当前题号
@@ -11778,20 +11782,22 @@
 			}
 
 			function flush(answer) {
-				// 判断是否正确
-				if (questionBank[id].isRight(answer)) {
-					right++;
-					alert("回答正确");
-				} else {
-					wrong++;
-					alert("回答错误\r\n" + "正确答案为:" + questionBank[id].getAnswer() + "\r\n解析:" + questionBank[id].getAnalysis());
-				}
-				// 判断是否做完
-				if (id == 9) {
-					var mark = 10 * right;
-					alert("你已完成所有题目,你的成绩为:" + mark + "分\r\n共做对" + right + "题,做错" + wrong + "题");
-					backHome();
-					return;
+				if (answer != undefined) {
+					// 判断是否正确
+					if (questionBank[id].isRight(answer)) {
+						right++;
+						alert("回答正确");
+					} else {
+						wrong++;
+						alert("回答错误\r\n" + "正确答案为:" + questionBank[id].getAnswer() + "\r\n解析:" + questionBank[id].getAnalysis());
+					}
+					// 判断是否做完
+					if (id == 9) {
+						var mark = 10 * right;
+						alert("你已完成所有题目,你的成绩为:" + mark + "分\r\n共做对" + right + "题,做错" + wrong + "题");
+						backHome();
+						return;
+					}
 				}
 				// 刷新页面
 				that.title.text.text = "第" + numberToChinese(++id + 1) + "题\r\n" + questionBank[id].getTitle();
