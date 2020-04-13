@@ -4,6 +4,8 @@ var changeBGM;
 var music_btn = document.getElementById("music_btn");
 // 控制按钮点按次数
 var times = 0;
+// 是否停止bgm
+var shouldStop = false;
 
 (function() {
     // 背景音乐
@@ -13,13 +15,15 @@ var times = 0;
      * 控制bgm的播放与暂停
      */
     playPause = function() {
-        if (music.paused) {
+        if (!shouldStop) {
             times++;
             music.play();
+            shouldStop = true;
             music_btn.src = "images/play.png";
         } else {
             times++;
             music.pause();
+            shouldStop = false;
             music_btn.src = "images/pause.png";
         }
     };
@@ -29,11 +33,13 @@ var times = 0;
      * @return {int}           0
      */
     changeBGM = function(bgmSrc) {
-        if (music.paused) {
+        console.log(shouldStop);
+        if (!shouldStop) {
             music.src = bgmSrc;
             music.pause();
         } else {
             music.src = bgmSrc;
+            music.play();
         }
         return 0;
     };

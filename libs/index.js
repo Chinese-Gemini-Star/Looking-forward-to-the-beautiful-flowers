@@ -11473,12 +11473,18 @@
 				// 开始
 				isAbout = false;
 				isNext = true;
+				if (times == 0) {
+					playPause();
+				}
 			}
 
 			function About() {
 				// 关于
 				isAbout = true;
 				isNext = true;
+				if (times == 0) {
+					playPause();
+				}
 			}
 		}
 		this.frame_58 = function() {
@@ -11503,8 +11509,7 @@
 				isAbout = false;
 				isNext = false;
 				if (times == 0) {
-					music.play();
-					music_btn.src = "images/play.png";
+					playPause();
 				}
 				that.play();
 			}
@@ -11514,8 +11519,7 @@
 				isAbout = true;
 				isNext = false;
 				if (times == 0) {
-					music.play();
-					music_btn.src = "images/play.png";
+					playPause();
 				}
 				that.play();
 			}
