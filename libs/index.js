@@ -11455,14 +11455,12 @@
 	p.nominalBounds = new cjs.Rectangle(-151.4, -63.9, 303.1, 126);
 
 
-	// stage content:
 	(lib.index = function(mode, startPosition, loop) {
 		if (loop == null) {
 			loop = false;
 		}
 		this.initialize(mode, startPosition, loop, {});
 
-		// timeline functions:
 		this.frame_0 = function() {
 			// 绑定当前对象
 			var that = this;
@@ -11489,9 +11487,8 @@
 			// 绑定当前对象
 			var that = this;
 			// alert("aaaa");
-			changeBGM("sounds/高梨康治_刃yaiba悲壮.mp3");
-
 			// 停止播放
+
 			this.stop();
 
 			if (isNext) {
@@ -11507,6 +11504,11 @@
 				// 开始
 				isAbout = false;
 				isNext = false;
+				changeBGM("sounds/高梨康治_刃yaiba悲壮.mp3");
+				if(times == 0){
+					music.play();
+        			music_btn.src = "images/play.png";
+        		}
 				that.play();
 			}
 
@@ -11514,6 +11516,11 @@
 				// 关于
 				isAbout = true;
 				isNext = false;
+				changeBGM("sounds/高梨康治_刃yaiba悲壮.mp3");
+				if(times == 0){
+					music.play();
+        			music_btn.src = "images/play.png";
+        		}
 				that.play();
 			}
 		}
